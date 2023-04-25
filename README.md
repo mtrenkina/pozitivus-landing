@@ -1,1 +1,1 @@
-# pozitivus_landing
+# pozitivus-landing
