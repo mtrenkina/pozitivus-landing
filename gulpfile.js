@@ -1,22 +1,21 @@
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-
 import gulp from "gulp";
 import plumber from "gulp-plumber";
 import sourcemap from "gulp-sourcemaps";
-const sass = require("gulp-sass");
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
-const csso = require("gulp-csso");
-const rename = require("gulp-rename");
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+const sass = gulpSass( dartSass );
+import postcss from "gulp-postcss";
+import autoprefixer from "autoprefixer";
+import csso from "gulp-csso";
+import rename from "gulp-rename";
 import svgstore from "gulp-svgstore";
-const svgmin = require("gulp-svgmin");
-const sync = require("browser-sync").create();
-const imagemin = require('gulp-imagemin');
-const imageminOptipng = require('imagemin-optipng');
+import svgmin from "gulp-svgmin";
+import sync from "browser-sync";
+import imagemin from 'gulp-imagemin';
+import imageminOptipng from 'imagemin-optipng';
 import imageminSvgo from 'imagemin-svgo';
 import imageminMozjpeg from 'imagemin-svgo';
-const webp = require('gulp-webp');
+import webp from 'gulp-webp';
 
 // Styles
 export const styles = () => {
@@ -30,7 +29,7 @@ export const styles = () => {
     .pipe(rename('styles.min.css'))
     .pipe(sourcemap.write('.'))
     .pipe(gulp.dest('build/css'))
-    .pipe(sync.stream());
+    .pipe(sync.create().stream());
 };
 
 // Server
