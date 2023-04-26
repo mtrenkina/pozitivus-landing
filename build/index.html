@@ -1,14 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Marketing agency tha helps buisnesses to grow"> 
+    <meta name="keywords" content="Marketing, Pozitivus, social media, content creation"> 
     <link rel="stylesheet" href="./css/normilize.css" />
     <link rel="stylesheet" href="./css/styles.min.css" />
     <title>Pozitivus marketing</title>
   </head>
   <body>
-    <h1>Title</h1>
+    <header class="page-header">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+            <a href="#" class="page-header__logo">
+                <img src="./img/logo.svg" alt="Pozitivus">
+            </a>
+            <button class="main-nav__toogle" type="button">
+                <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <ul class="main-nav__list site-list">
+                <li class="site-list__item">
+                  <a href="#">About us</a>
+                </li>
+                <li class="site-list__item">
+                  <a href="#">Services</a>
+                </li>
+                <li class="site-list__item">
+                  <a href="#">Use Cases</a>
+                </li>
+                <li class="site-list__item">
+                  <a href="#">Pricing</a>
+                </li>
+                <li class="site-list__item">
+                  <a href="#">Blog</a>
+                </li>
+                <li class="site-list__item site-list__item--link">
+                  <a href="#">Request a quote</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="page-main">
+        <h1 class="page-main__heading visually-hidden">Pozitivus marketing agency</h1>
+        <section class="promo">        
+          <h2 class="main-heading promo__heading">Navigating the digital landscape for success</h2>
+          <p class="main-description promo__description">Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
+          <button class="button">Book a consultation</button>
+          <picture class="promo__img">
+            <source
+            srcset="./img/desktop/loudspeaker.png"
+            media="(min-width: 1380px)"
+            width="601"
+            height="515"
+            />
+            <img
+              src="./img/mobile/loudspeaker.png"
+              alt="loudspeaker"
+              width="390"
+              height="310"
+            />
+          </picture>
+        </section>
+        <section class="partners">
+          <h2 class="main-heading partners__heading visually-hidden">Our partners</h2>
+          <ul class="partners__list">
+            <li class="partners__item">
+              <a href="https://www.amazon.com/">
+                <img src="./img/partners/amazon-logo.svg" alt="Amazon" class="partners__logo">
+              </a>
+            </li>
+            <li class="partners__item">
+              <a href="https://dribbble.com/">
+                <img src="./img/partners/dribble-logo.svg" alt="Dribble" class="partners__logo">
+              </a>
+            </li>
+            <li class="partners__item">
+              <a href="https://www.hubspot.com/">
+                <img src="./img/partners/hubspot-logo.svg" alt="HubSpot" class="partners__logo">
+              </a>
+            </li>
+            <li class="partners__item">
+              <a href="https://www.notion.so/">
+                <img src="./img/partners/notion-logo.svg" alt="Notion" class="partners__logo">
+              </a>
+            </li>
+            <li class="partners__item">
+              <a href="https://www.netflix.com/">
+                <img src="./img/partners/netflix-logo.svg" alt="Netflix" class="partners__logo">
+              </a>
+            </li>
+            <li class="partners__item">
+              <a href="https://zoom.us/">
+                <img src="./img/partners/zoom-logo.svg" alt="Zoom" class="partners__logo">
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="services">
+          <h2 class="main-heading services__heading">Services</h2>
+          <p class="main-description services__description">At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:</p>
+          <ul class="services__list services-list">
+            <li class="services-list__item">
+              <h3 class="services-list__heading">Search engine <br/>
+                optimization</h3>
+              <a href="" class="services-list__link"><span>Learn more</span></a>
+            </li>
+            <li class="services-list__item">
+              <h3 class="services-list__heading">Pay-per-click <br/>
+                advertising</h3>
+              <a href="" class="services-list__link"><span>Learn more</span></a>
+            </li>
+            <li class="services-list__item">
+              <h3 class="services-list__heading">Social Media <br/>
+                Marketing</h3>
+              <a href="" class="services-list__link"><span>Learn more</span></a>
+            </li>
+            <li class="services-list__item">
+              <h3 class="services-list__heading">Email <br/>
+                Marketing</h3>
+              <a href="" class="services-list__link"><span>Learn more</span></a>
+            </li>
+            <li class="services-list__item">
+              <h3 class="services-list__heading">Content <br/>
+                Creation</h3>
+              <a href="" class="services-list__link"><span>Learn more</span></a>
+            </li>
+            <li class="services-list__item">
+              <h3 class="services-list__heading">Analytics and <br/>
+                Tracking</h3>
+              <a href="" class="services-list__link"><span>Learn more</span></a>
+            </li>
+          </ul>
+        </section>
+        <article class="ivitation">
+          <h2 class="visually-hidden">Ivitation</h2>
+          <h3 class="ivitation__heading">Let's make things happen</h3>
+          <p class="main-description ivitation__description">Contact us today to learn more about how our digital marketing services can help your business grow and succeed online.</p>
+          <button class="button">Get your free proposal</button>
+        </article>
+        <section class="cases">
+          <h2 class="main-heading cases__heading">Case Studies</h2>
+          <p class="main-description cases__description">Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies</p>
+          <div class="cases__wrapper">
+            <ul class="cases__list cases-list">
+              <li class="cases-list__item">
+                <p class="main-description cases-list__description">For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.</p>
+                <a href="" class="cases-list__link"><span>Learn more</span></a>
+              </li>
+              <li class="cases-list__item">
+                <p class="main-description cases-list__description">For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.</p>
+                <a href="" class="cases-list__link"><span>Learn more</span></a>
+              </li>
+              <li class="cases-list__item">
+                <p class="main-description cases-list__description">For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 20% increase in online sales.</p>
+                <a href="" class="cases-list__link"><span>Learn more</span></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="working-process">
+          <h2 class="main-heading working-process__heading">Our Working Process</h2>
+          <p class="main-description working-process__description">Step-by-Step Guide to Achieving Your Business Goals</p>
+          <ol class="working-process__list process-list">
+            <li class="process-list__item process-list__item--1">
+              <h4 class="process-list__heading">Consultation</h4>
+              <button class="process-list__button process-list__button--opened"><span class="visually-hidden">Hide description</span></button>
+              <p class="process-list__description main-description">During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.</p>
+            </li>
+            <li class="process-list__item process-list__item--2">
+              <h4 class="process-list__heading">Research and Strategy Development</h4>
+              <button class="process-list__button process-list__button--closed"><span class="visually-hidden">Expand description</span></button>
+              <p class="process-list__description main-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corrupti a ipsa, placeat est nihil itaque voluptatibus quibusdam quas labore adipisci sit totam? Possimus perferendis excepturi, iste ullam aliquam repellat.</p>
+            </li>
+            <li class="process-list__item process-list__item--3">
+              <h4 class="process-list__heading">Implementation</h4>
+              <button class="process-list__button process-list__button--closed"><span class="visually-hidden">Expand description</span></button>
+              <p class="process-list__description main-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda odio ullam fugiat, excepturi repellendus distinctio dicta impedit voluptatum ducimus eius repellat! Iure quos obcaecati quae blanditiis molestias qui quis. Minima?</p>
+            </li>
+            <li class="process-list__item process-list__item--4">
+              <h4 class="process-list__heading">Monitoring and Optimization</h4>
+              <button class="process-list__button process-list__button--closed"><span class="visually-hidden">Expand description</span></button>
+              <p class="process-list__description main-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ad adipisci atque inventore molestias ullam reiciendis porro quos quas rerum iste voluptatem expedita, amet, libero dolorem ipsum incidunt omnis tempora.</p>
+            </li>
+            <li class="process-list__item process-list__item--5">
+              <h4 class="process-list__heading">Reporting and Communication</h4>
+              <button class="process-list__button process-list__button--closed"><span class="visually-hidden">Expand description</span></button>
+              <p class="process-list__description main-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim labore veniam provident tempore et cum ullam eligendi vero id vitae iusto, sed atque sapiente voluptas repellendus expedita cumque. Natus, rerum.</p>
+            </li>
+            <li class="process-list__item process-list__item--6">
+              <h4 class="process-list__heading">Continual Improvement</h4>
+              <button class="process-list__button process-list__button--closed"><span class="visually-hidden">Expand description</span></button>
+              <p class="process-list__description main-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore obcaecati omnis commodi debitis tenetur nisi soluta dolor cupiditate rem, molestias illo reiciendis dignissimos, error voluptate ipsa cum fugit, ab autem!</p>
+            </li>
+          </ol>
+        </section>
+        <section class="team"></section>
+        <section class="testimonials"></section>
+        <form action="post" class="contact-us"></form>
+    </main>
+    <footer class="page-footer"></footer>
   </body>
 </html>
