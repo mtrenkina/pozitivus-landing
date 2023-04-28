@@ -1,14 +1,14 @@
 # pozitivus-landing
 <p>Adaptive and responsive layout for marketing agency</p> 
 
-### Описание проекта:
+### Project details:
 <p>Landing page</p>
 
 ---
 
-### Используемые инструменты и технологии:
-#### 1. HTML (семантика, доступность) + CSS (адаптивность) + щептока JS (для меню и слайдера)
-#### 2. БЭМ методологоия именования классов и файлов
-#### 3. Препроцессор Sass
-#### 4. Gulp (сборка Sass-файлов, оптимизация изображений, подготовка спрайта и т.д.)
-#### 5. Плагин PerfectPixel
+### Tools:
+#### 1. HTML + CSS + JS
+#### 2. BEM
+#### 3. Sass
+#### 4. Gulp
+#### 5. PerfectPixel plagin
