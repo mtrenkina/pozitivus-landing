@@ -16,11 +16,48 @@ import imageminOptipng from 'imagemin-optipng';
 import imageminSvgo from 'imagemin-svgo';
 import imageminMozjpeg from 'imagemin-svgo';
 import webp from 'gulp-webp';
+import fileinclude  from 'gulp-file-include';
 
-// Styles
+const path = {
+  build: { 
+      html: 'build/',
+      js: 'build/js/',
+      css: 'build/css/',
+      img: 'build/img/',
+      fonts: 'build/fonts/'
+  },
+  source: { 
+      html: 'source/blocks/*.html', 
+      js: 'source/js/script.js',
+      sass: 'source/sass/style.scss',
+      img: 'source/img/**/*.*', 
+      icons: 'source/img/icons/icon-*.svg',
+      webp: 'source/img/**/*.{jpg,png}',
+      fonts: 'source/fonts/**/*.*'
+  },
+  watch: { 
+      html: 'source/**/*.html',
+      js: 'source/js/**/*.js',
+      style: 'build/sass/**/*.scss',
+      img: 'source/img/**/*.*',
+      fonts: 'source/fonts/**/*.*'
+  },
+  clean: './build'
+};
+
+// HTML assembling
+export const htmlBuild = () => {
+  return gulp
+    .src('source/index.html')
+    .pipe(fileinclude())
+    .pipe(gulp.dest(path.build.html))
+    .pipe(sync.create().stream());
+}
+
+// Styles assembling
 export const styles = () => {
   return gulp
-    .src('source/sass/style.scss')
+    .src(path.source.sass)
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
@@ -28,7 +65,7 @@ export const styles = () => {
     .pipe(csso())
     .pipe(rename('styles.min.css'))
     .pipe(sourcemap.write('.'))
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest(path.build.css))
     .pipe(sync.create().stream());
 };
 
@@ -47,16 +84,15 @@ export const server = (done) => {
 
 // Watcher
 const watcher = () => {
-  gulp.watch('source/less/**/*.less', gulp.series('styles'));
-  gulp.watch('source/less/*.less', gulp.series('styles'));
-  gulp.watch('build/*.html').on('change', sync.reload);
-  gulp.watch('source/*.js').on('change', sync.reload);
+  gulp.watch(path.watch.style, gulp.series('styles'));
+  gulp.watch(path.watch.html).on('change', sync.reload);
+  gulp.watch(path.watch.js).on('change', sync.reload);
 };
 
 // Sprite
 export const sprite = () => {
   return gulp
-    .src('source/img/sprite_icons/icon_*.svg')
+    .src(path.source.icons)
     .pipe(svgstore({ inlineSvg: true }))
     .pipe(
       svgmin({
@@ -77,10 +113,10 @@ export const sprite = () => {
     .pipe(gulp.dest('build'));
 };
 
-// Images
+// Images optimization
 export const images = () => {
   return gulp
-    .src('source/img/**/*.{jpg,png,svg}')
+    .src(path.source.img)
     .pipe(
       imagemin([
         imageminOptipng({ optimizationLevel: 3 }),
@@ -88,14 +124,23 @@ export const images = () => {
         imageminMozjpeg({ quality: 75, progressive: true }),
       ])
     )
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest(path.build.img));
 };
 
+// Make Webp
 export const makeWebp = () => {
   return gulp
-    .src('source/img/**/*.{jpg,png}')
+    .src(path.source.webp)
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest(path.build.img))
 }
+
+// Move fonts
+export const fontsBuild = () => {
+  return gulp
+    .src(path.source.fonts)
+    .pipe(gulp.dest(path.build.fonts));
+}
+
 
 export default gulp.series(styles, server, watcher);
