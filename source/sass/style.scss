@@ -1,1 +1,5 @@
-@import "../sass/blocks/fonts.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "./blocks/global.scss";
+@import "./blocks/fonts.scss";
+@import "./blocks/header.scss";

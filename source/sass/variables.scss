@@ -1,0 +1,26 @@
+//Colors
+$green: #B9FF66;
+$gray: #F3F3F3;
+$dark: #191A23;
+
+//Viewports
+$mobile-width: 430px;
+$mobile-width-max: 767px;
+$desktop-width: 1440px;
+
+$mobile-max: "(max-width: ${mobile-width-max})";
+$desktop: "(min-width: ${desktop-width})";
+
+//Retina
+$retina-dpi: 144dpi;
+$retina: "(min-resolution: ${retina-dpi})";
+
+//Font parameters
+$baseFontSize: 18px;
+$baseLineHeight: 22.97px;
+
+$h2FontSize: 40px;
+$h2LineHeight: 51.04px;
+
+$h3FontSize: 30px;
+$h3LineHeight: 38.28px;
