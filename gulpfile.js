@@ -38,7 +38,7 @@ const path = {
   watch: { 
       html: 'source/**/*.html',
       js: 'source/js/**/*.js',
-      style: 'build/sass/**/*.scss',
+      style: 'source/sass/**/*.scss',
       img: 'source/img/**/*.*',
       fonts: 'source/fonts/**/*.*'
   },

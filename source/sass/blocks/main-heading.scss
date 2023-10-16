@@ -1,0 +1,10 @@
+.main-heading {
+    @include mxn-font-style($size: $h2FontSize, $lineHeight: $h2LineHeight);
+    background-color: $green;
+    width: fit-content;
+    padding: 0 7px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 7px;
+    
+}

@@ -1,24 +1,4 @@
-@mixin mxn-media( $selectors... ){
-
-    $selector: '';
-
-    @each $s in $selectors {
-
-        @if $selector == '' { $selector: $s; }
-        @else { $selector: $selector + ', ' + $s; }
-
-    }
-
-    @media #{unquote($selector)}{
-
-        @content;
-
-    }
-
-}
-
 @mixin mxn-font-style($size: $baseFontSize, $lineHeight: $baseLineHeight, $color: black, $weight: 400) {
-    font-family: "Space Grotesk", "Times New Roman", Times, serif;
     font-size: $size;
     line-height: $lineHeight;
     color: $color;
