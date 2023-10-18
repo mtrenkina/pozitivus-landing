@@ -37,11 +37,11 @@ img {
   width: $mobile-width;
   padding: 0 20px;
   font-family: "Space Grotesk", "Arial", sans-serif;
-  @include mxn-font-style($size: $baseFontSize, $lineHeight: $baseLineHeight, $color: black, $weight: 400);
+  @include mxn-font-style($baseFontSize, $baseLineHeight, black, 400);
 
-  @media ((min-width: $desktop-width)) {
+  @media (min-width: $desktop-width) {
     width: $desktop-width;
     padding: 0 110px;
-    @include mxn-font-style($size: $pDescFontSize, $lineHeight: $pDescLineHeight);
+    @include mxn-font-style($pDescFontSize, $pDescLineHeight);
   }
 }

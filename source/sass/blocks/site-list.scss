@@ -1,14 +1,5 @@
 .site-list {
   @include mxn-list-style;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
-
-  @media ($desktop) {
-    flex-direction: row;
-    align-items: center;
-  }
 
   &__item a {
     @include mxn-link-style;

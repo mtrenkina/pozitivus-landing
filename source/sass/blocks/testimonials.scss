@@ -1,0 +1,21 @@
+.testimonials {
+    margin-bottom: 60px;
+    overflow: visible;
+
+    &__description {
+        text-align: center;
+    }
+
+    &__slider {
+       width: 100%;
+       background-color: #191A23; 
+       color: white;
+       border-radius: 45px;
+       padding: 30px 30px 60px 30px;
+    }
+
+    &__slider-list {
+        display: flex;
+        gap: 60px;
+    }
+}

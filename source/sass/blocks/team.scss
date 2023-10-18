@@ -1,0 +1,21 @@
+.team {
+  padding-bottom: 60px;
+
+  &__description {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__button {
+    margin-top: 35px;
+  }
+
+  &__button--clicked {
+    display: none;
+  }
+}

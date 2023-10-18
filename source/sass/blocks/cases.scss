@@ -1,0 +1,13 @@
+.cases {
+  overflow: hidden;
+  margin-bottom: 60px;
+
+  &__description {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 20px;
+  }
+}

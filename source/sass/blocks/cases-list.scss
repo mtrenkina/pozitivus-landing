@@ -1,0 +1,36 @@
+.cases-list {
+    @include mxn-list-style();
+    width: fit-content;
+
+    &__item {
+        width: 350px;
+        height: 252px;
+        background-color: black;
+        color: white;
+        padding: 42px 50px;
+        border-radius: 45px;
+    }
+
+    &__description {
+        padding-bottom: 20px;
+    }
+
+    &__link {
+        position: relative;
+        cursor: pointer;
+        @include mxn-link-style();
+        @include mxn-font-style(20px, 28px, $green);
+    }
+
+    &__link::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: -40px;
+        top: 5px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-image: url('../../img/arrow-green.svg');
+    }
+}

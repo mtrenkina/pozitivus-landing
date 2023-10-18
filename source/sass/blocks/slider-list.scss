@@ -1,0 +1,35 @@
+.slider-list {
+  @include mxn-list-style();
+  width: fit-content;
+  
+  margin-bottom: 60px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    background-color: #191A23;
+  }
+
+  &__container {
+    width: 330px;
+    min-height: 328px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    background-image: url('../../img/testimonials/testimonials-union.svg');
+  }
+
+  &__description {
+    padding: 30px;
+  }
+
+  &__person {
+    align-self: flex-end;
+  }
+
+  &__name {
+    @include mxn-font-style($h4FontSize, auto, $green, 500);
+  }
+}

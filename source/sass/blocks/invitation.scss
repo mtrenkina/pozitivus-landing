@@ -1,0 +1,23 @@
+.invitation {
+  width: 390px;
+  height: 370px;
+  background-color: $grey;
+  border-radius: 45px;
+  padding: 50px;
+  margin-bottom: 60px;
+}
+
+.ivitation__description {
+  padding-bottom: 20px;
+}
+
+.ivitation__heading {
+  @include mxn-font-style($h3FontSize, 30px, black, 500);
+  padding-bottom: 20px;
+}
+
+.ivitation__button span {
+    @media (max-width: $mobile-width-max) {
+        display: none;
+    }
+  }

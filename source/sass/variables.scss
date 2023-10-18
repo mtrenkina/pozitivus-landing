@@ -1,6 +1,6 @@
 //Colors
 $green: #B9FF66;
-$gray: #F3F3F3;
+$grey: #F3F3F3;
 $dark: #191A23;
 
 //Viewports
@@ -16,17 +16,35 @@ $retina-dpi: 144dpi;
 $retina: "min-resolution: ${retina-dpi}";
 
 //Font parameters
+//Mobile
 $baseFontSize: 16px;
 $baseLineHeight: 24px;
+
+$h1FontSize: 43px;
+$h1LineHeight: 64.5px;
+
+$h2FontSize: 36px;
+$h2LineHeight: 54px;
+
+$h3FontSize: 26px;
+$h3LineHeight: 39px;
+
+$h4FontSize: 18px;
+$h4LineHeight: 27px;
+
+//Desctop
 
 $pDescFontSize: 18px;
 $pDescLineHeight: 27px;
 
-$h2FontSize: 40px;
-$h2LineHeight: 60px;
+$h1DescFontSize: 60px;
+$h1DescLineHeight: 90px;
 
-$h3FontSize: 30px;
-$h3LineHeight: 45px;
+$h2DescFontSize: 40px;
+$h2DescLineHeight: 60px;
 
-$h4FontSize: 20px;
-$h4LineHeight: 30px;
+$h3DescFontSize: 30px;
+$h3DescLineHeight: 45px;
+
+$h4DescFontSize: 20px;
+$h4DescLineHeight: 30px;

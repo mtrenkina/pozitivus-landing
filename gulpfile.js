@@ -85,7 +85,7 @@ export const server = (done) => {
 // Watcher
 const watcher = () => {
   gulp.watch(path.watch.style, gulp.series('styles'));
-  gulp.watch(path.watch.html).on('change', sync.reload);
+  gulp.watch(path.watch.html, gulp.series('htmlBuild'));
   gulp.watch(path.watch.js).on('change', sync.reload);
 };
 

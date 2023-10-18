@@ -19,12 +19,15 @@
 }
 
 .main-nav__list {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+  gap: 10px;
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    width: 100%;
+    flex-direction: row;
+    gap: 20px;
   }
 }
 
@@ -82,7 +85,7 @@
   box-shadow: 0 8px 0 0 #000, 0 16px 0 0 #000;
 }
 
-@media ($mobile-max) {
+@media (max-width: $mobile-width-max) {
   .main-nav--closed .main-nav__wrapper {
     display: none;
   }

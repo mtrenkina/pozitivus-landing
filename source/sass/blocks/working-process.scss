@@ -1,0 +1,17 @@
+.working-process {
+  margin-bottom: 60px;
+  
+  &__heading {
+    @include mxn-font-style($h2FontSize, 45px, black, 500);
+  }
+
+  &__description {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

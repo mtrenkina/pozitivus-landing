@@ -1,0 +1,98 @@
+.services-list {
+   @include mxn-list-style();
+
+   &__item,  &__item:nth-of-type(4n){
+    padding: 50px;
+    width: 390px;
+    min-height: 322px;
+    background-color: $grey;
+    border: 1px solid black;
+    box-shadow: inset 0 -7px 0;
+    border-radius: 45px;
+    position: relative;
+   }
+
+   &__item:nth-of-type(3n-1) {
+    background-color: $green;
+   }
+
+   &__item:nth-of-type(3n) {
+    background-color: black;
+   }
+
+   &__link {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    bottom: 57px;
+
+    width: 41px;
+    height: 41px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url('../../img/icons/icon-arrow-green-and-black.svg');
+   }
+
+   &__item::after {
+    content: "";
+    display: block;
+    width: 165px;
+    height: 129px;
+    position: absolute;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url('../../img/services/tokyo-magnifier-web-search-with-elements.png');
+    bottom: 50px;
+    right: 50px;
+   }
+
+   &__item:nth-of-type(2)::after {
+    background-image: url('../../img/services/tokyo-selecting-a-value-in-the-browser-window.png');
+   }
+
+   &__item:nth-of-type(3)::after {
+    width: 127.12px;
+    height: 129px;
+    background-image: url('../../img/services/tokyo-browser-window-with-emoticon-likes-and-stars-around.png');
+   }
+
+   &__item:nth-of-type(4)::after {
+    width: 155px;
+    height: 142px;
+    background-image: url('../../img/services/tokyo-sending-messages-from-one-place-to-another.png');
+   }
+
+   &__item:nth-of-type(5)::after {
+    width: 138.72px;
+    height: 129px;
+    background-image: url('../../img/services/tokyo-many-browser-windows-with-different-information.png');
+   }
+
+   &__item:nth-of-type(6)::after {
+    width: 157.78px;
+    height: 129px;
+    background-image: url('../../img/services/tokyo-volumetric-analytics-of-different-types-in-web-browsers.png');
+   }
+
+   &__item:nth-of-type(3n) &__link {
+    background-image: url('../../img/icons/icon-arrow-black.svg');
+   }
+
+   &__link span {
+    @media (max-width: $mobile-width-max) {
+        display: none;
+    }
+   }
+
+   &__heading {
+    @include mxn-font-style($h3FontSize, $h3LineHeight, black, 500);
+    background-color: white;
+    border-radius: 7px;
+    width: fit-content;
+    padding: 0 5px;
+   }
+
+   &__item:nth-of-type(1) &__heading, &__item:nth-of-type(4n) &__heading {
+    background-color: $green;
+   }
+}

@@ -55,12 +55,6 @@
     <h2 class="main-heading promo__heading">
       Navigating the digital landscape for success
     </h2>
-    <p class="main-description promo__description">
-      Our digital marketing agency helps businesses grow and succeed online
-      through a range of services including SEO, PPC, social media
-      marketing, and content creation.
-    </p>
-    <button class="button">Book a consultation</button>
     <picture class="promo__img">
       <source
         srcset="./img/loudspeaker.png"
@@ -75,12 +69,19 @@
         height="310"
       />
     </picture>
+    <p class="main-description promo__description">
+      Our digital marketing agency helps businesses grow and succeed online
+      through a range of services including SEO, PPC, social media
+      marketing, and content creation.
+    </p>
+    <button class="button">Book a consultation</button>
   </section>
       <section class="partners">
     <h2 class="main-heading partners__heading visually-hidden">
       Our partners
     </h2>
-    <ul class="partners__list">
+    <div>
+    <ul class="partners__list partners__list--first">
       <li class="partners__item">
         <a href="https://www.amazon.com/">
           <img
@@ -109,19 +110,19 @@
         </a>
       </li>
       <li class="partners__item">
-        <a href="https://www.notion.so/">
+        <a href="https://www.netflix.com/">
           <img
-            src="./img/partners/notion-logo.svg"
-            alt="Notion"
+            src="./img/partners/netflix-logo.svg"
+            alt="Netflix"
             class="partners__logo"
           />
         </a>
       </li>
       <li class="partners__item">
-        <a href="https://www.netflix.com/">
+        <a href="https://www.notion.so/">
           <img
-            src="./img/partners/netflix-logo.svg"
-            alt="Netflix"
+            src="./img/partners/notion-logo.svg"
+            alt="Notion"
             class="partners__logo"
           />
         </a>
@@ -136,6 +137,63 @@
         </a>
       </li>
     </ul>
+    <ul class="partners__list partners__list--second partners__list--mobile">
+      <li class="partners__item">
+        <a href="https://www.amazon.com/">
+          <img
+            src="./img/partners/amazon-logo.svg"
+            alt="Amazon"
+            class="partners__logo"
+          />
+        </a>
+      </li>
+      <li class="partners__item">
+        <a href="https://dribbble.com/">
+          <img
+            src="./img/partners/dribble-logo.svg"
+            alt="Dribble"
+            class="partners__logo"
+          />
+        </a>
+      </li>
+      <li class="partners__item">
+        <a href="https://www.hubspot.com/">
+          <img
+            src="./img/partners/hubspot-logo.svg"
+            alt="HubSpot"
+            class="partners__logo"
+          />
+        </a>
+      </li>
+      <li class="partners__item">
+        <a href="https://www.netflix.com/">
+          <img
+            src="./img/partners/netflix-logo.svg"
+            alt="Netflix"
+            class="partners__logo"
+          />
+        </a>
+      </li>
+      <li class="partners__item">
+        <a href="https://www.notion.so/">
+          <img
+            src="./img/partners/notion-logo.svg"
+            alt="Notion"
+            class="partners__logo"
+          />
+        </a>
+      </li>
+      <li class="partners__item">
+        <a href="https://zoom.us/">
+          <img
+            src="./img/partners/zoom-logo.svg"
+            alt="Zoom"
+            class="partners__logo"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
   </section>
       <section class="services">
     <h2 class="main-heading services__heading">Services</h2>
@@ -189,14 +247,15 @@
     </ul>
   </section>
       <article class="invitation">
-    <h2 class="visually-hidden">Invitation</h2>
-    <h3 class="ivitation__heading">Let's make things happen</h3>
-    <p class="main-description ivitation__description">
-      Contact us today to learn more about how our digital marketing
-      services can help your business grow and succeed online.
-    </p>
-    <button class="button">Get your free proposal</button>
-  </article>
+  <h2 class="visually-hidden">Invitation</h2>
+  <h3 class="ivitation__heading">Let's make things happen</h3>
+  <p class="main-description ivitation__description">
+    Contact us today to learn more about how our digital marketing services can
+    help your business grow and succeed online.
+  </p>
+  <button class="button ivitation__button">Get your <span> free</span> proposal</button>
+</article>
+
       <section class="cases">
     <h2 class="main-heading cases__heading">Case Studies</h2>
     <p class="main-description cases__description">
@@ -233,387 +292,353 @@
     </div>
   </section>
       <section class="working-process">
-    <h2 class="main-heading working-process__heading">
-      Our Working Process
-    </h2>
-    <p class="main-description working-process__description">
-      Step-by-Step Guide to Achieving Your Business Goals
-    </p>
-    <ol class="working-process__list process-list">
-      <li class="process-list__item process-list__item--1">
+  <h2 class="main-heading working-process__heading">
+    Our Working <span><br /></span> Process
+  </h2>
+  <p class="main-description working-process__description">
+    Step-by-Step Guide to Achieving Your Business Goals
+  </p>
+  <ol class="working-process__list process-list">
+    <li class="process-list__item process-list__item--1">
+      <div>
         <h4 class="process-list__heading">Consultation</h4>
         <button class="process-list__button process-list__button--opened">
           <span class="visually-hidden">Hide description</span>
         </button>
-        <p class="process-list__description main-description">
-          During the initial consultation, we will discuss your business
-          goals and objectives, target audience, and current marketing
-          efforts. This will allow us to understand your needs and tailor
-          our services to best fit your requirements.
-        </p>
-      </li>
-      <li class="process-list__item process-list__item--2">
-        <h4 class="process-list__heading">
-          Research and Strategy Development
-        </h4>
+      </div>
+      <p class="process-list__description main-description">
+        During the initial consultation, we will discuss your business goals and
+        objectives, target audience, and current marketing efforts. This will
+        allow us to understand your needs and tailor our services to best fit
+        your requirements.
+      </p>
+    </li>
+    <li class="process-list__item process-list__item--opened process-list__item--2">
+      <div>
+        <h4 class="process-list__heading">Research and Strategy Development</h4>
         <button class="process-list__button process-list__button--closed">
           <span class="visually-hidden">Expand description</span>
         </button>
-        <p class="process-list__description main-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-          corrupti a ipsa, placeat est nihil itaque voluptatibus quibusdam
-          quas labore adipisci sit totam? Possimus perferendis excepturi,
-          iste ullam aliquam repellat.
-        </p>
-      </li>
-      <li class="process-list__item process-list__item--3">
+      </div>
+      <p class="process-list__description main-description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa corrupti
+        a ipsa, placeat est nihil itaque voluptatibus quibusdam quas labore
+        adipisci sit totam? Possimus perferendis excepturi, iste ullam aliquam
+        repellat.
+      </p>
+    </li>
+    <li class="process-list__item process-list__item--3">
+      <div>
         <h4 class="process-list__heading">Implementation</h4>
         <button class="process-list__button process-list__button--closed">
           <span class="visually-hidden">Expand description</span>
         </button>
-        <p class="process-list__description main-description">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Assumenda odio ullam fugiat, excepturi repellendus distinctio
-          dicta impedit voluptatum ducimus eius repellat! Iure quos
-          obcaecati quae blanditiis molestias qui quis. Minima?
-        </p>
-      </li>
-      <li class="process-list__item process-list__item--4">
+      </div>
+      <p class="process-list__description main-description">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda odio
+        ullam fugiat, excepturi repellendus distinctio dicta impedit voluptatum
+        ducimus eius repellat! Iure quos obcaecati quae blanditiis molestias qui
+        quis. Minima?
+      </p>
+    </li>
+    <li class="process-list__item process-list__item--4">
+      <div>
         <h4 class="process-list__heading">Monitoring and Optimization</h4>
         <button class="process-list__button process-list__button--closed">
           <span class="visually-hidden">Expand description</span>
         </button>
-        <p class="process-list__description main-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ad
-          adipisci atque inventore molestias ullam reiciendis porro quos
-          quas rerum iste voluptatem expedita, amet, libero dolorem ipsum
-          incidunt omnis tempora.
-        </p>
-      </li>
-      <li class="process-list__item process-list__item--5">
+      </div>
+      <p class="process-list__description main-description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ad
+        adipisci atque inventore molestias ullam reiciendis porro quos quas
+        rerum iste voluptatem expedita, amet, libero dolorem ipsum incidunt
+        omnis tempora.
+      </p>
+    </li>
+    <li class="process-list__item process-list__item--5">
+      <div>
         <h4 class="process-list__heading">Reporting and Communication</h4>
         <button class="process-list__button process-list__button--closed">
           <span class="visually-hidden">Expand description</span>
         </button>
-        <p class="process-list__description main-description">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim
-          labore veniam provident tempore et cum ullam eligendi vero id
-          vitae iusto, sed atque sapiente voluptas repellendus expedita
-          cumque. Natus, rerum.
-        </p>
-      </li>
-      <li class="process-list__item process-list__item--6">
+      </div>
+      <p class="process-list__description main-description">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim labore
+        veniam provident tempore et cum ullam eligendi vero id vitae iusto, sed
+        atque sapiente voluptas repellendus expedita cumque. Natus, rerum.
+      </p>
+    </li>
+    <li class="process-list__item process-list__item--6">
+      <div>
         <h4 class="process-list__heading">Continual Improvement</h4>
         <button class="process-list__button process-list__button--closed">
           <span class="visually-hidden">Expand description</span>
         </button>
-        <p class="process-list__description main-description">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore
-          obcaecati omnis commodi debitis tenetur nisi soluta dolor
-          cupiditate rem, molestias illo reiciendis dignissimos, error
-          voluptate ipsa cum fugit, ab autem!
-        </p>
-      </li>
-    </ol>
-  </section>
-      <section class="team">
-    <h2 class="main-heading team__heading">Team</h2>
-    <p class="main-description team__description">
-      Meet the skilled and experienced team behind our successful digital
-      marketing strategies
-    </p>
-    <ul class="team__list team-list">
-      <li class="team-list__item">
-        <div class="person">
-          <img
-            src="./img/team/John-Smith.png"
-            alt="John's photo"
-            class="person__photo"
-          />
-          <dl class="person-list">
-            <dd class="person-list__name">John Smith</dd>
-            <dt class="person-list__position">CEO and Founder</dt>
-          </dl>
-          <p class="main-description person__description">
-            10+ years of experience in digital marketing. Expertise in SEO,
-            PPC, and content strategy
-          </p>
-        </div>
-      </li>
-      <li class="team-list__item">
-        <div class="person">
-          <img
-            src="./img/team/Jane-Doe.png"
-            alt="Jane's photo"
-            class="person__photo"
-          />
-          <dl class="person-list">
-            <dd class="person-list__name">Jane Doe</dd>
-            <dt class="person-list__position">Director of Operations</dt>
-          </dl>
-          <p class="main-description person__description">
-            7+ years of experience in project management and team
-            leadership. Strong organizational and communication skills
-          </p>
-        </div>
-      </li>
-      <li class="team-list__item">
-        <div class="person">
-          <img
-            src="./img/team/Michael-Brown.png"
-            alt="Michael's photo"
-            class="person__photo"
-          />
-          <dl class="person-list">
-            <dd class="person-list__name">Michael Brown</dd>
-            <dt class="person-list__position">Senior SEO Specialist</dt>
-          </dl>
-          <p class="main-description person__description">
-            5+ years of experience in SEO and content creation. Proficient
-            in keyword research and on-page optimization
-          </p>
-        </div>
-      </li>
-      <li class="team-list__item">
-        <div class="person">
-          <img
-            src="./img/team/Emily-Johnson.png"
-            alt="Emily's photo"
-            class="person__photo"
-          />
-          <dl class="person-list">
-            <dd class="person-list__name">Emily Johnson</dd>
-            <dt class="person-list__position">PPC Manager</dt>
-          </dl>
-          <p class="main-description person__description">
-            3+ years of experience in paid search advertising. Skilled in
-            campaign management and performance analysis
-          </p>
-        </div>
-      </li>
-      <li class="team-list__item">
-        <div class="person">
-          <img
-            src="./img/team/Brian-Williams.png"
-            alt="Brian's photo"
-            class="person__photo"
-          />
-          <dl class="person-list">
-            <dd class="person-list__name">Brian Williams</dd>
-            <dt class="person-list__position">Social Media Specialist</dt>
-          </dl>
-          <p class="main-description person__description">
-            4+ years of experience in social media marketing. Proficient in
-            creating and scheduling content, analyzing metrics, and building
-            engagement
-          </p>
-        </div>
-      </li>
-      <li class="team-list__item">
-        <div class="person">
-          <img
-            src="./img/team/Sarah-Kim.png"
-            alt="Sarah's photo"
-            class="person__photo"
-          />
-          <dl class="person-list">
-            <dd class="person-list__name">Sarah Kim</dd>
-            <dt class="person-list__position">Content Creator</dt>
-          </dl>
-          <p class="main-description person__description">
-            2+ years of experience in writing and editing Skilled in
-            creating compelling, SEO-optimized content for various
-            industries
-          </p>
-        </div>
-      </li>
-    </ul>
-    <button class="button team__button">See all team</button>
-  </section>
-      <section class="testimonials">
-    <h2 class="main-heading testimonials__heading">Testimonials</h2>
-    <p class="main-description testimonials__description">
-      Hear from Our Satisfied Clients: Read Our Testimonials to Learn More
-      about Our Digital Marketing Services
-    </p>
-    <div class="slider testimonials__slider">
-      <input
-        class="visually-hidden"
-        type="radio"
-        id="btn-1"
-        name="toggle"
-        checked
-      />
-      <input
-        class="visually-hidden"
-        type="radio"
-        id="btn-2"
-        name="toggle"
-      />
-      <input
-        class="visually-hidden"
-        type="radio"
-        id="btn-3"
-        name="toggle"
-      />
-      <input
-        class="visually-hidden"
-        type="radio"
-        id="btn-4"
-        name="toggle"
-      />
-      <input
-        class="visually-hidden"
-        type="radio"
-        id="btn-5"
-        name="toggle"
-      />
+      </div>
+      <p class="process-list__description main-description">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore
+        obcaecati omnis commodi debitis tenetur nisi soluta dolor cupiditate
+        rem, molestias illo reiciendis dignissimos, error voluptate ipsa cum
+        fugit, ab autem!
+      </p>
+    </li>
+  </ol>
+</section>
 
-      <div class="slider-controls">
-        <label
-          class="slider-controls__item slider-controls__item--1"
-          for="btn-1"
-          >First</label
-        >
-        <label
-          class="slider-controls__item slider-controls__item--2"
-          for="btn-2"
-          >Second</label
-        >
-        <label
-          class="slider-controls__item slider-controls__item--3"
-          for="btn-3"
-          >Third</label
-        >
-        <label
-          class="slider-controls__item slider-controls__item--4"
-          for="btn-4"
-          >Fourth</label
-        >
-        <label
-          class="slider-controls__item slider-controls__item--5"
-          for="btn-5"
-          >Fifth</label
+      <section class="team">
+  <h2 class="main-heading team__heading">Team</h2>
+  <p class="main-description team__description">
+    Meet the skilled and experienced team behind our successful digital
+    marketing strategies
+  </p>
+  <ul class="team__list team-list">
+    <li class="team-list__item">
+      <div>
+        <img
+          src="./img/team/John-Smith.png"
+          alt="John's photo"
+          class="team-list__photo"
+        />
+        <dl class="team-list__person">
+          <dd class="team-list__name">John Smith</dd>
+          <dt class="team-list__position">CEO and Founder</dt>
+        </dl>
+        <a href="linkedin.com" class="team-list__link"
+          ><span class="visually-hidden">Ссылка на Linkedin</span></a
         >
       </div>
+      <p class="main-description team-list__description">
+        10+ years of experience in digital marketing. Expertise in SEO, PPC, and
+        content strategy
+      </p>
+    </li>
+    <li class="team-list__item">
+      <div>
+        <img
+          src="./img/team/Jane-Doe.png"
+          alt="Jane's photo"
+          class="team-list__photo"
+        />
+        <dl class="team-list__person">
+          <dd class="team-list__name">Jane Doe</dd>
+          <dt class="team-list__position">Director of Operations</dt>
+        </dl>
+        <a href="linkedin.com" class="team-list__link"
+          ><span class="visually-hidden">Ссылка на Linkedin</span></a
+        >
+      </div>
+      <p class="main-description team-list__description">
+        7+ years of experience in project management and team leadership. Strong
+        organizational and communication skills
+      </p>
+    </li>
+    <li class="team-list__item">
+      <div>
+        <img
+          src="./img/team/Michael-Brown.png"
+          alt="Michael's photo"
+          class="team-list__photo"
+        />
+        <dl class="team-list__person">
+          <dd class="team-list__name">Michael Brown</dd>
+          <dt class="team-list__position">Senior SEO Specialist</dt>
+        </dl>
+        <a href="linkedin.com" class="team-list__link"
+          ><span class="visually-hidden">Ссылка на Linkedin</span></a
+        >
+      </div>
+      <p class="main-description team-list__description">
+        5+ years of experience in SEO and content creation. Proficient in
+        keyword research and on-page optimization
+      </p>
+    </li>
+    <li class="team-list__item">
+      <div>
+        <img
+          src="./img/team/Emily-Johnson.png"
+          alt="Emily's photo"
+          class="team-list__photo"
+        />
+        <dl class="team-list__person">
+          <dd class="team-list__name">Emily Johnson</dd>
+          <dt class="team-list__position">PPC Manager</dt>
+        </dl>
+        <a href="linkedin.com" class="team-list__link"
+          ><span class="visually-hidden">Ссылка на Linkedin</span></a
+        >
+      </div>
+      <p class="main-description team-list__description">
+        3+ years of experience in paid search advertising. Skilled in campaign
+        management and performance analysis
+      </p>
+    </li>
+    <li class="team-list__item">
+      <div>
+        <img
+          src="./img/team/Brian-Williams.png"
+          alt="Brian's photo"
+          class="team-list__photo"
+        />
+        <dl class="team-list__person">
+          <dd class="team-list__name">Brian Williams</dd>
+          <dt class="team-list__position">Social Media Specialist</dt>
+        </dl>
+        <a href="linkedin.com" class="team-list__link"
+          ><span class="visually-hidden">Ссылка на Linkedin</span></a
+        >
+      </div>
+      <p class="main-description team-list__description">
+        4+ years of experience in social media marketing. Proficient in creating
+        and scheduling content, analyzing metrics, and building engagement
+      </p>
+    </li>
+    <li class="team-list__item">
+      <div>
+        <img
+          src="./img/team/Sarah-Kim.png"
+          alt="Sarah's photo"
+          class="team-list__photo"
+        />
+        <dl class="team-list__person">
+          <dd class="team-list__name">Sarah Kim</dd>
+          <dt class="team-list__position">Content Creator</dt>
+        </dl>
+        <a href="linkedin.com" class="team-list__link"
+          ><span class="visually-hidden">Ссылка на Linkedin</span></a
+        >
+      </div>
+      <p class="main-description team-list__description">
+        2+ years of experience in writing and editing Skilled in creating
+        compelling, SEO-optimized content for various industries
+      </p>
+    </li>
+  </ul>
+  <button class="button team__button">See all team</button>
+</section>
 
-      <button class="button-prev" onclick="plusSlides(-1)">previous</button>
-      <button class="button-next" onclick="plusSlides(1)">next</button>
+      <section class="testimonials">
+  <h2 class="main-heading testimonials__heading">Testimonials</h2>
+  <p class="main-description testimonials__description">
+    Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about
+    Our Digital Marketing Services
+  </p>
+  <div class="slider testimonials__slider">
+    <ul class="testimonials__slider-list slider-list">
+      <li class="slider-list__item">
+        <div class="slider-list__container">
+          <p class="main__description slider-list__description">
+            "We have been working with Positivus for the past year and have seen
+            a significant increase in website traffic and leads as a result of
+            their efforts. The team is professional, responsive, and truly cares
+            about the success of our business. We highly recommend Positivus to
+            any company looking to grow their online presence."
+          </p>
+        </div>
+        <dl class="slider-list__person">
+          <dt class="slider-list__name">John Smith</dt>
+          <dd class="slider-list__position">Marketing Director at XYZ Corp</dd>
+        </dl>
+      </li>
+      <li class="slider-list__item">
+        <div class="slider-list__container">
+          <p class="main__description slider-list__description">
+            "We have been working with Positivus for the past year and have seen
+            a significant increase in website traffic and leads as a result of
+            their efforts. The team is professional, responsive, and truly cares
+            about the success of our business. We highly recommend Positivus to
+            any company looking to grow their online presence."
+          </p>
+        </div>
+        <dl class="slider-list__person">
+          <dt class="slider-list__name">John Smith</dt>
+          <dd class="slider-list__position">Marketing Director at XYZ Corp</dd>
+        </dl>
+      </li>
+      <li class="slider-list__item">
+        <div class="slider-list__container">
+          <p class="main__description slider-list__description">
+            "We have been working with Positivus for the past year and have seen
+            a significant increase in website traffic and leads as a result of
+            their efforts. The team is professional, responsive, and truly cares
+            about the success of our business. We highly recommend Positivus to
+            any company looking to grow their online presence."
+          </p>
+        </div>
+        <dl class="slider-list__person">
+          <dt class="slider-list__name">John Smith</dt>
+          <dd class="slider-list__position">Marketing Director at XYZ Corp</dd>
+        </dl>
+      </li>
+      <li class="slider-list__item">
+        <div class="slider-list__container">
+          <p class="main__description slider-list__description">
+            "We have been working with Positivus for the past year and have seen
+            a significant increase in website traffic and leads as a result of
+            their efforts. The team is professional, responsive, and truly cares
+            about the success of our business. We highly recommend Positivus to
+            any company looking to grow their online presence."
+          </p>
+        </div>
+        <dl class="slider-list__person">
+          <dt class="slider-list__name">John Smith</dt>
+          <dd class="slider-list__position">Marketing Director at XYZ Corp</dd>
+        </dl>
+      </li>
+      <li class="slider-list__item">
+        <div class="slider-list__container">
+          <p class="main__description slider-list__description">
+            "We have been working with Positivus for the past year and have seen
+            a significant increase in website traffic and leads as a result of
+            their efforts. The team is professional, responsive, and truly cares
+            about the success of our business. We highly recommend Positivus to
+            any company looking to grow their online presence."
+          </p>
+        </div>
+        <dl class="slider-list__person">
+          <dt class="slider-list__name">John Smith</dt>
+          <dd class="slider-list__position">Marketing Director at XYZ Corp</dd>
+        </dl>
+      </li>
+    </ul>
+    <input
+      class="visually-hidden"
+      type="radio"
+      id="btn-1"
+      name="toggle"
+      checked
+    />
+    <input class="visually-hidden" type="radio" id="btn-2" name="toggle" />
+    <input class="visually-hidden" type="radio" id="btn-3" name="toggle" />
+    <input class="visually-hidden" type="radio" id="btn-4" name="toggle" />
+    <input class="visually-hidden" type="radio" id="btn-5" name="toggle" />
 
-      <ul class="slider-list">
-        <li class="slider-list__page testimonial">
-          <div class="testimonial__container">
-            <div class="testimonial__wrapper">
-              <p class="main__description testimonial__description">
-                "We have been working with Positivus for the past year and
-                have seen a significant increase in website traffic and
-                leads as a result of their efforts. The team is
-                professional, responsive, and truly cares about the success
-                of our business. We highly recommend Positivus to any
-                company looking to grow their online presence."
-              </p>
-            </div>
-            <dl class="person-list testimonial__person">
-              <dt class="person-list__name person-list__name--green">
-                John Smith
-              </dt>
-              <dd class="person-list__position">
-                Marketing Director at XYZ Corp
-              </dd>
-            </dl>
-          </div>
-        </li>
-        <li class="slider-list__page testimonial">
-          <div class="testimonial__container">
-            <div class="testimonial__wrapper">
-              <p class="main__description testimonial__description">
-                "We have been working with Positivus for the past year and
-                have seen a significant increase in website traffic and
-                leads as a result of their efforts. The team is
-                professional, responsive, and truly cares about the success
-                of our business. We highly recommend Positivus to any
-                company looking to grow their online presence."
-              </p>
-            </div>
-            <dl class="person-list testimonial__person">
-              <dt class="person-list__name person-list__name--green">
-                John Smith
-              </dt>
-              <dd class="person-list__position">
-                Marketing Director at XYZ Corp
-              </dd>
-            </dl>
-          </div>
-        </li>
-        <li class="slider-list__page testimonial">
-          <div class="testimonial__container">
-            <div class="testimonial__wrapper">
-              <p class="main__description testimonial__description">
-                "We have been working with Positivus for the past year and
-                have seen a significant increase in website traffic and
-                leads as a result of their efforts. The team is
-                professional, responsive, and truly cares about the success
-                of our business. We highly recommend Positivus to any
-                company looking to grow their online presence."
-              </p>
-            </div>
-            <dl class="person-list testimonial__person">
-              <dt class="person-list__name person-list__name--green">
-                John Smith
-              </dt>
-              <dd class="person-list__position">
-                Marketing Director at XYZ Corp
-              </dd>
-            </dl>
-          </div>
-        </li>
-        <li class="slider-list__page testimonial">
-          <div class="testimonial__container">
-            <div class="testimonial__wrapper">
-              <p class="main__description testimonial__description">
-                "We have been working with Positivus for the past year and
-                have seen a significant increase in website traffic and
-                leads as a result of their efforts. The team is
-                professional, responsive, and truly cares about the success
-                of our business. We highly recommend Positivus to any
-                company looking to grow their online presence."
-              </p>
-            </div>
-            <dl class="person-list testimonial__person">
-              <dt class="person-list__name person-list__name--green">
-                John Smith
-              </dt>
-              <dd class="person-list__position">
-                Marketing Director at XYZ Corp
-              </dd>
-            </dl>
-          </div>
-        </li>
-        <li class="slider-list__page testimonial">
-          <div class="testimonial__container">
-            <div class="testimonial__wrapper">
-              <p class="main__description testimonial__description">
-                "We have been working with Positivus for the past year and
-                have seen a significant increase in website traffic and
-                leads as a result of their efforts. The team is
-                professional, responsive, and truly cares about the success
-                of our business. We highly recommend Positivus to any
-                company looking to grow their online presence."
-              </p>
-            </div>
-            <dl class="person-list testimonial__person">
-              <dt class="person-list__name person-list__name--green">
-                John Smith
-              </dt>
-              <dd class="person-list__position">
-                Marketing Director at XYZ Corp
-              </dd>
-            </dl>
-          </div>
-        </li>
-      </ul>
+    <div class="slider-controls">
+      <label class="slider-controls__item slider-controls__item--1" for="btn-1"
+        >First</label
+      >
+      <label class="slider-controls__item slider-controls__item--2" for="btn-2"
+        >Second</label
+      >
+      <label class="slider-controls__item slider-controls__item--3" for="btn-3"
+        >Third</label
+      >
+      <label class="slider-controls__item slider-controls__item--4" for="btn-4"
+        >Fourth</label
+      >
+      <label class="slider-controls__item slider-controls__item--5" for="btn-5"
+        >Fifth</label
+      >
     </div>
-  </section>
+
+    <button class="button-prev" onclick="plusSlides(-1)">
+      <span class="visually-hidden">previous</span>
+    </button>
+    <button class="button-next" onclick="plusSlides(1)">
+      <span class="visually-hidden">next</span>
+    </button>
+  </div>
+</section>
+
       <form action="https://" method="post" class="contact-us form">
     <h2 class="main-heading contact-us__heading">Contact Us</h2>
     <p class="main-description contact-us__description">
