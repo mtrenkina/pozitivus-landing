@@ -35,13 +35,20 @@ img {
   box-sizing: border-box;
   margin: 0 auto;
   width: $mobile-width;
-  padding: 0 20px;
   font-family: "Space Grotesk", "Arial", sans-serif;
   @include mxn-font-style($baseFontSize, $baseLineHeight, black, 400);
 
   @media (min-width: $desktop-width) {
     width: $desktop-width;
-    padding: 0 110px;
     @include mxn-font-style($pDescFontSize, $pDescLineHeight);
+  }
+}
+
+.page-main {
+  padding: 0 20px;
+  overflow: hidden;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
   }
 }

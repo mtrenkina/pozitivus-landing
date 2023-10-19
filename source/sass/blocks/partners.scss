@@ -1,49 +1,54 @@
 @keyframes animMarquee {
   0% {
-    transform: translateX(50%);
+    transform: translateX(300%);
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-330%);
   }
 }
 
 @keyframes animLeftMarquee {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-330%);
   }
   100% {
-    transform: translateX(50%);
+    transform: translateX(300%);
   }
 }
 
 .partners {
   padding: 60px 0;
-  overflow: hidden;
 
   &__list {
-    width: max-content;
+    width: 500px;
     @include mxn-list-style;
     display: flex;
+    flex-wrap: wrap;
     column-gap: 30px;
+    row-gap: 20px;
     flex-direction: row;
   }
 
-  &__list--first {
-    animation: animMarquee 15s linear infinite;
-    padding-bottom: 10px;
+  &__item {
+    width: 146px;
+  }
+
+  &__item:nth-child(1),
+  &__item:nth-child(2),
+  &__item:nth-child(3) {
+    animation: animLeftMarquee 10s linear infinite;
     @media (min-width: $desktop-width) {
       animation: none;
     }
   }
 
-  &__list--second {
-    animation: animLeftMarquee 15s linear infinite;
-  }
-
-  &__list--mobile {
+  &__item:nth-child(4),
+  &__item:nth-child(5),
+  &__item:nth-child(6) {
+    animation: animMarquee 10s linear infinite;
     @media (min-width: $desktop-width) {
-      display: none;
+      animation: none;
     }
   }
 }
@@ -56,5 +61,4 @@
   & img:hover {
     filter: none;
   }
-
 }

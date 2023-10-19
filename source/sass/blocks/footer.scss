@@ -1,0 +1,89 @@
+.footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 50px 20px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 37px;
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+  }
+
+  &__logo img {
+    width: 144px;
+    height: auto;
+  }
+
+  &__heading {
+    @include mxn-font-style($h4FontSize);
+    font-weight: 500;
+    margin-bottom: 37px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__form {
+    width: 100%;
+    height: 216px;
+    background-color: #292A32;
+    border-radius: 14px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__form input {
+    width: 100%;
+    height: 66px;
+    background-color: transparent;
+    border-radius: 14px;
+    padding: 21px 25px;
+    border: 1px solid white;
+  }
+
+  &__form input::placeholder {
+    color: white;
+  }
+
+  &__copyright {
+    padding-top: 37px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__copyright::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    top: 0px;
+  }
+
+  &__copyright a {
+    @include mxn-link-style;
+  }
+
+  &__copyright a:hover {
+    opacity: 0.6;
+  }
+}

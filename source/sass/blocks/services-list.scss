@@ -1,6 +1,16 @@
 .services-list {
    @include mxn-list-style();
 
+   &__heading {
+    @include mxn-font-style($h3FontSize, 32px, black, 500);
+    background-color: white;
+    display: inline;
+    border-radius: 7px;
+    width: fit-content;
+    padding: 0 5px;
+    box-decoration-break: clone;
+   }
+
    &__item,  &__item:nth-of-type(4n){
     padding: 50px;
     width: 390px;
@@ -84,13 +94,7 @@
     }
    }
 
-   &__heading {
-    @include mxn-font-style($h3FontSize, $h3LineHeight, black, 500);
-    background-color: white;
-    border-radius: 7px;
-    width: fit-content;
-    padding: 0 5px;
-   }
+   
 
    &__item:nth-of-type(1) &__heading, &__item:nth-of-type(4n) &__heading {
     background-color: $green;

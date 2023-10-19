@@ -1,16 +1,33 @@
 .site-list {
   @include mxn-list-style;
 
+  .main-nav:not(.main-nav--nojs) &__item:not(.site-list__item--link) {
+    animation: ani 1.5s ease-out;
+  }
+
+  @keyframes ani {
+    0% {
+      transform: translateX(-20%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
   &__item a {
     @include mxn-link-style;
-    padding: 5px 0;
+    padding: 5px;
+  }
+
+  &__item a:hover {
+    opacity: 0.6;
   }
 
   &__item--link {
-    @media ($desktop) {
-      padding: 20px 35px;
-      border: 1px solid black;
-      border-radius: 14px;
-    }
+    padding: 20px 35px;
+    border: 1px solid black;
+    border-radius: 14px;
   }
 }

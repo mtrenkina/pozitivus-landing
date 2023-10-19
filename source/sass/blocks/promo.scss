@@ -2,6 +2,7 @@
 
 &__heading {
     background-color: transparent;
+    @include mxn-font-style($h1FontSize, auto, black, 500);
 }
 
 }

@@ -1,0 +1,21 @@
+.footer-nav {
+  @include mxn-list-style;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  &__item:nth-last-child(1) {
+    @media (max-width:$mobile-width-max) {
+        display: none;
+    }
+  }
+
+  &__item a {
+    @include mxn-link-style;
+  }
+
+  &__item:hover {
+    opacity: 0.6;
+  }
+}

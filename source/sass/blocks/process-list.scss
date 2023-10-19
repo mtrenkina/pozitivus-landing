@@ -84,12 +84,13 @@
     cursor: pointer;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-image: url('../../img/icons/icon-plus.png');
+    background-image: url('../../img/icons/icon-plus.svg');
     background-size: contain;
+    background-color: transparent;
   }
 
   &__item--opened &__button {
-    background-image: url('../../img/icons/icon-minus.png');
+    background-image: url('../../img/icons/icon-minus.svg');
   }
 
   &__description {

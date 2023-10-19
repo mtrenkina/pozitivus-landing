@@ -1,11 +1,15 @@
 .working-process {
   margin-bottom: 60px;
+  text-align: center;
   
   &__heading {
     @include mxn-font-style($h2FontSize, 45px, black, 500);
+    display: inline;
+    box-decoration-break: clone;
   }
 
   &__description {
+    padding-top: 30px;
     text-align: center;
   }
 

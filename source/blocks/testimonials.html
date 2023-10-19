@@ -4,7 +4,7 @@
     Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about
     Our Digital Marketing Services
   </p>
-  <div class="slider testimonials__slider">
+  <div class="testimonials__slider">
     <ul class="testimonials__slider-list slider-list">
       <li class="slider-list__item">
         <div class="slider-list__container">
@@ -82,41 +82,50 @@
         </dl>
       </li>
     </ul>
-    <input
-      class="visually-hidden"
-      type="radio"
-      id="btn-1"
-      name="toggle"
-      checked
-    />
-    <input class="visually-hidden" type="radio" id="btn-2" name="toggle" />
-    <input class="visually-hidden" type="radio" id="btn-3" name="toggle" />
-    <input class="visually-hidden" type="radio" id="btn-4" name="toggle" />
-    <input class="visually-hidden" type="radio" id="btn-5" name="toggle" />
+    <div></div>
 
     <div class="slider-controls">
-      <label class="slider-controls__item slider-controls__item--1" for="btn-1"
-        >First</label
+      <button
+        class="slider-controls__button slider-controls__button--prev slider-controls__button--blocked"
+        onclick="plusSlides(-1)"
       >
-      <label class="slider-controls__item slider-controls__item--2" for="btn-2"
-        >Second</label
-      >
-      <label class="slider-controls__item slider-controls__item--3" for="btn-3"
-        >Third</label
-      >
-      <label class="slider-controls__item slider-controls__item--4" for="btn-4"
-        >Fourth</label
-      >
-      <label class="slider-controls__item slider-controls__item--5" for="btn-5"
-        >Fifth</label
-      >
-    </div>
+        <span class="visually-hidden">previous</span>
+      </button>
+      <div class="slider-controls__wrapper">
+        <input
+          class="visually-hidden"
+          type="radio"
+          id="btn-1"
+          name="toggle"
+          checked
+        />
+        <label class="slider-controls__item" for="btn-1"
+          ><span class="visually-hidden">First</span></label
+        >
+        <input class="visually-hidden" type="radio" id="btn-2" name="toggle" />
+        <label class="slider-controls__item" for="btn-2"
+          ><span class="visually-hidden">Second</span></label
+        >
+        <input class="visually-hidden" type="radio" id="btn-3" name="toggle" />
+        <label class="slider-controls__item" for="btn-3"
+          ><span class="visually-hidden">Third</span></label
+        >
+        <input class="visually-hidden" type="radio" id="btn-4" name="toggle" />
 
-    <button class="button-prev" onclick="plusSlides(-1)">
-      <span class="visually-hidden">previous</span>
-    </button>
-    <button class="button-next" onclick="plusSlides(1)">
-      <span class="visually-hidden">next</span>
-    </button>
+        <label class="slider-controls__item" for="btn-4"
+          ><span class="visually-hidden">Fourth</span></label
+        >
+        <input class="visually-hidden" type="radio" id="btn-5" name="toggle" />
+        <label class="slider-controls__item" for="btn-5"
+          ><span class="visually-hidden">Fifth</span></label
+        >
+      </div>
+      <button
+        class="slider-controls__button slider-controls__button--next"
+        onclick="plusSlides(1)"
+      >
+        <span class="visually-hidden">next</span>
+      </button>
+    </div>
   </div>
 </section>

@@ -20,38 +20,21 @@
             <a href="#">Blog</a>
             </li>
         </ul>
-    </nav>
-    <ul class="footer__social social-list">
-        <li class="social-list__item">
-            <a href="#" class="social-list__link">
-                <img src="./img/icons/icon-in.svg" alt="LinkedIn" class="social-list__image social-list__image--in">
-            </a>
-        </li>
-        <li class="social-list__item">
-            <a href="#" class="social-list__link">
-                <img src="./img/icons/icon-fb.svg" alt="Facebook" class="social-list__image social-list__image--fb">
-            </a>
-        </li>
-        <li class="social-list__item">
-            <a href="#" class="social-list__link">
-                <img src="./img/icons/icon-tw.svg" alt="Twitter" class="social-list__image social-list__image--tw">
-            </a>
-        </li>
-    </ul>
-    <section class="footer-contacts">
+    </nav> 
         <div>
-            <h3 class="main-heading footer-contacts__heading">Contact Us</h2>
-            <p class="footer-contacts__text">
-                Email: info@positivus.com </br>
-                Phone: 555-567-8901 </br>
-                Address: 1234 Main St </br>
-                Moonstone City, Stardust State 12345
-            </p>
+            <h3 class="main-heading footer__heading">Contact us:</h2>
+            <div class="footer__contacts">
+                <p class="footer__text">
+                    Email: info@positivus.com </p>
+                <p class="footer__text">Phone: 555-567-8901 </p>
+                <p class="footer__text">Address: 1234 Main St </br>
+                    Moonstone City, Stardust State 12345
+                </p>
+            </div>
         </div>
-        <form action="https://" method="post" class="footer-form">
+        <form action="" method="post" class="footer__form">
             <label class="visually-hidden" for="footer-email">E-mail</label>
             <input
-            class="footer-form__input"
             type="email"
             id="footer-email"
             name="footer-email"
@@ -62,9 +45,25 @@
                 Subscribe to news
             </button>
         </form>
-    </section>
-    <div class="copyright">
+    <ul class="footer__social-list social-list">
+        <li class="social-list__item">
+            <a href="#" target="_blank" title="LinkedIn" class="social-list__link" >
+                <img src="./img/icons/icon-in.svg" alt="LinkedIn" class="social-list__image social-list__image--in">
+            </a>
+        </li>
+        <li class="social-list__item">
+            <a href="#" target="_blank" title="Facebook" class="social-list__link">
+                <img src="./img/icons/icon-fb.svg" alt="Facebook" class="social-list__image social-list__image--fb">
+            </a>
+        </li>
+        <li class="social-list__item">
+            <a href="#" target="_blank" title="Twitter" class="social-list__link">
+                <img src="./img/icons/icon-tw.svg" alt="Twitter" class="social-list__image social-list__image--tw">
+            </a>
+        </li>
+    </ul>
+    <div class="footer__copyright">
         <p>&#169; 2023 Positivus. All Rights Reserved.</p>
-        <a href="#" class="copyright__link">Privacy Policy</a>
+        <a href="#" target="_blank">Privacy Policy</a>
     </div>
 </footer>
