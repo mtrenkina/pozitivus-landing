@@ -2,12 +2,49 @@
   overflow: hidden;
   margin-bottom: 60px;
 
+  &__header {
+    @media (min-width: $desktop-width) {
+      width: fit-content;
+      display: flex;
+      justify-content: flex-start;
+      gap: 40px;
+      padding-bottom: 80px;
+    }
+  }
+
+  &__heading {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
   &__description {
     text-align: center;
+
+    @media (min-width: $desktop-width) {
+      text-align: left;
+      width: 580px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__wrapper {
+    @media (min-width: $desktop-width) {
+      padding: 70px 60px;
+      background-color: black;
+      border-radius: 45px;
+      height: 326px;
+    }
   }
 
   &__list {
     display: flex;
     gap: 20px;
+    
+
+    @media (min-width: $desktop-width) {
+      justify-content: space-between;
+      gap: auto;
+    }
   }
 }

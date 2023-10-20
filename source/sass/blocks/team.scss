@@ -1,18 +1,58 @@
 .team {
   padding-bottom: 60px;
 
+  @media (min-width: $desktop-width) {
+    padding-bottom: 100px;
+  }
+
+  &__header {
+    @media (min-width: $desktop-width) {
+      width: fit-content;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 40px;
+      padding-bottom: 85px;
+    }
+  }
+
+  &__heading {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
   &__description {
     text-align: center;
+
+    @media (min-width: $desktop-width) {
+      text-align: left;
+      width: 473px;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media (min-width: $desktop-width) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
   }
 
   &__button {
     margin-top: 35px;
+
+    @media (min-width: $desktop-width) {
+      width: 268px;
+      display: block;
+      margin-left: auto;
+    }
   }
 
   &__button--clicked {

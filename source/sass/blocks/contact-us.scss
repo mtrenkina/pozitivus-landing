@@ -1,17 +1,85 @@
 .contact-us {
   margin-bottom: 60px;
 
+  @media (min-width: $desktop-width) {
+    margin-bottom: 140px;
+  }
+
+  &__header {
+    @media (min-width: $desktop-width) {
+      width: fit-content;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 40px;
+      padding-bottom: 85px;
+    }
+  }
+
+  &__heading {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
   &__description {
     text-align: center;
+
+    @media (min-width: $desktop-width) {
+      text-align: left;
+      width: 323px;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    min-height: 540px;
+    border-radius: 45px;
+
+    @media (min-width: $desktop-width) {
+      padding: 60px 0 80px 100px;
+      height: 773px;
+      background-color: $grey;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+
+  &__container::after {
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      width: 691.57px;
+      height: 648px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('../../img/sun-and-stars.png');
+      top: 70px;
+      right: -325px;
+    }
   }
 
   &__wrapper {
     width: 100%;
-    min-height: 540px;
+    padding: 50px;
     background-color: $grey;
     border-radius: 45px;
-    padding: 50px;
-    margin-bottom: 30px;
+
+    @media (min-width: $desktop-width) {
+      padding: 0;
+      width: 556px;
+      
+    }
+  }
+
+  &__button {
+    margin-top: 30px;
+    @media (min-width: $desktop-width) {
+      width: 556px;
+    }
   }
 
   &__radio-input {
@@ -20,6 +88,11 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+
+    @media (min-width: $desktop-width) {
+      justify-content: flex-start;
+      gap: 35px;
+    }
   }
 
   &__radio-input div {
@@ -38,9 +111,9 @@
     cursor: pointer;
   }
 
-  &__radio-input input[type="checkbox"]:checked+label::after {
+  &__radio-input input[type='checkbox']:checked + label::after {
     position: absolute;
-    content: "";
+    content: '';
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -49,7 +122,7 @@
     left: 5px;
   }
 
-  &__radio-input input[type="checkbox"]:not(:checked)+label::after {
+  &__radio-input input[type='checkbox']:not(:checked) + label::after {
     background-color: transparent;
   }
 
@@ -69,7 +142,7 @@
     gap: 10px;
   }
 
-  &__text-input label{
+  &__text-input label {
     @include mxn-font-style(14px);
   }
 
@@ -87,6 +160,9 @@
     border: 1px solid black;
     border-radius: 14px;
     padding: 18px 20px;
+
+    @media (min-width: $desktop-width) {
+      height: 190px;
+    }
   }
-  
 }

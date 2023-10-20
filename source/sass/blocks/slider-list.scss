@@ -1,36 +1,48 @@
 .slider-list {
-  @include mxn-list-style();
-  width: fit-content;
-  
   margin-bottom: 60px;
 
   &__item {
     display: flex;
     flex-direction: column;
     gap: 20px;
-
-    background-color: #191A23;
+    background-color: #191a23;
   }
 
   &__container {
     width: 330px;
     min-height: 328px;
+    margin-bottom: 20px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: auto auto;
     background-image: url('../../img/testimonials/testimonials-union.svg');
+
+    @media (min-width: $desktop-width) {
+      width: 606px;
+      min-height: 266px;
+      background-image: url('../../img/testimonials/testimonials-union-desktop.svg');
+    }
   }
 
   &__description {
     padding: 30px;
+
+    @media (min-width: $desktop-width) {
+      padding: 48px 52px 80px 52px;
+    }
   }
 
   &__person {
-    align-self: flex-end;
-    padding-right: 27px;
+    padding-left: 65px;
+
+    @media (min-width: $desktop-width) {
+      align-self: flex-start;
+      padding-left: 85px;
+    }
   }
 
   &__name {
     @include mxn-font-style($h4FontSize, auto, $green, 500);
   }
 }
+

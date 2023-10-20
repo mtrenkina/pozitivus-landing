@@ -10,6 +10,11 @@
     padding: 40px 50px;
     display: flex;
     flex-direction: column;
+
+    @media (min-width: $desktop-width) {
+      width: 386px;
+      padding: 40px 35px;
+    }
   }
 
   &__item div {
@@ -47,20 +52,38 @@
 
   &__person {
     padding-left: 20px;
+    align-self: flex-end
+
   }
 
   &__name {
-    @include mxn-font-style($h4FontSize, auto, black, 500);
+    @include mxn-font-style($h4FontSize, 24px, black, 500);
+  }
+
+  &__position {
+    @media (min-width: $desktop-width) {
+     width: 100%;
+     line-height: 22px;
+    }
+  }
+
+  &__item:nth-child(2) &__position {
+    @media (min-width: $desktop-width) {
+     width: max-content;
+    }
   }
 
   &__description {
     padding-top: 20px;
     padding-bottom: 0;
+    
   }
 
   &--collapsed &__item:nth-child(5),
   &--collapsed &__item:nth-child(6) {
-    display: none;
+    @media (max-width: $mobile-width-max) {
+      display: none;
+    }
   }
 
   &:not(.team-list--collapsed) &__item:nth-child(5),

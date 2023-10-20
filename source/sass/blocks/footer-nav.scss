@@ -5,6 +5,11 @@
   align-items: center;
   gap: 15px;
 
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    gap: 40px;
+  }
+
   &__item:nth-last-child(1) {
     @media (max-width:$mobile-width-max) {
         display: none;
@@ -13,6 +18,10 @@
 
   &__item a {
     @include mxn-link-style;
+
+    @media (min-width: $desktop-width) {
+      text-decoration: underline;
+    }
   }
 
   &__item:hover {

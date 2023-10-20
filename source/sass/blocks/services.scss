@@ -1,8 +1,35 @@
 .services {
   margin-bottom: 70px;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 100px;
+  }
+
+  &__header {
+    @media (min-width: $desktop-width) {
+      width: fit-content;
+      display: flex;
+      justify-content: flex-start;
+      gap: 40px;
+      padding-bottom: 85px;
+    }
+  }
+
+  &__heading {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
 
   &__description {
     text-align: center;
+
+    @media (min-width: $desktop-width) {
+      text-align: left;
+      width: 580px;
+      padding-bottom: 0;
+    }
   }
 
   &__list {
@@ -14,6 +41,7 @@
     @media (min-width: $desktop-width) {
       flex-direction: row;
       flex-wrap: wrap;
+      gap: 40px;
     }
   }
 }

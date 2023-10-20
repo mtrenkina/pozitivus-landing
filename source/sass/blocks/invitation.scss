@@ -5,6 +5,34 @@
   border-radius: 45px;
   padding: 50px;
   margin-bottom: 60px;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 500px auto;
+    padding: 60px;
+    position: relative;
+  }
+
+  &__wrapper {
+    @media (min-width: $desktop-width) {
+      grid-area: 1 / 1 / 4 / 2;
+    }
+  }
+
+  &__wrapper::after {
+    @media (min-width: $desktop-width) {
+      content: '';
+      position: absolute;
+      width: 359px;
+      height: 410px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('../../img/invitation.png');
+      top: -20px;
+      right: 135px;
+    }
+  }
 }
 
 .ivitation__description {
@@ -16,8 +44,14 @@
   padding-bottom: 20px;
 }
 
-.ivitation__button span {
-    @media (max-width: $mobile-width-max) {
-        display: none;
-    }
+.ivitation__button {
+  @media (min-width: $desktop-width) {
+    width: 288px;
   }
+}
+
+.ivitation__button span {
+  @media (max-width: $mobile-width-max) {
+    display: none;
+  }
+}

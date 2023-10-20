@@ -1,16 +1,43 @@
 .working-process {
   margin-bottom: 60px;
   text-align: center;
-  
+
+  &__header {
+    @media (min-width: $desktop-width) {
+      width: fit-content;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 40px;
+      padding-bottom: 85px;
+    }
+  }
+
   &__heading {
     @include mxn-font-style($h2FontSize, 45px, black, 500);
     display: inline;
     box-decoration-break: clone;
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__heading span{
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
   }
 
   &__description {
     padding-top: 30px;
     text-align: center;
+
+    @media (min-width: $desktop-width) {
+      text-align: left;
+      width: 292px;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
   }
 
   &__list {

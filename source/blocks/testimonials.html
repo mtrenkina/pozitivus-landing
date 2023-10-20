@@ -1,12 +1,14 @@
 <section class="testimonials">
-  <h2 class="main-heading testimonials__heading">Testimonials</h2>
-  <p class="main-description testimonials__description">
-    Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about
-    Our Digital Marketing Services
-  </p>
+  <div class="testimonials__header">
+    <h2 class="main-heading testimonials__heading">Testimonials</h2>
+    <p class="main-description testimonials__description">
+      Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about
+      Our Digital Marketing Services
+    </p>
+  </div>
   <div class="testimonials__slider">
-    <ul class="testimonials__slider-list slider-list">
-      <li class="slider-list__item">
+    <div class="testimonials__slider-list slider-list">
+      <div class="slider-list__item">
         <div class="slider-list__container">
           <p class="main__description slider-list__description">
             "We have been working with Positivus for the past year and have seen
@@ -20,8 +22,8 @@
           <dt class="slider-list__name">John Smith</dt>
           <dd class="slider-list__position">Marketing Director at XYZ Corp</dd>
         </dl>
-      </li>
-      <li class="slider-list__item">
+      </div>
+      <div class="slider-list__item">
         <div class="slider-list__container">
           <p class="main__description slider-list__description">
             "We have been working with Positivus for the past year and have seen
@@ -35,8 +37,8 @@
           <dt class="slider-list__name">John Smith</dt>
           <dd class="slider-list__position">Marketing Director at XYZ Corp</dd>
         </dl>
-      </li>
-      <li class="slider-list__item">
+      </div>
+      <div class="slider-list__item">
         <div class="slider-list__container">
           <p class="main__description slider-list__description">
             "We have been working with Positivus for the past year and have seen
@@ -50,8 +52,8 @@
           <dt class="slider-list__name">John Smith</dt>
           <dd class="slider-list__position">Marketing Director at XYZ Corp</dd>
         </dl>
-      </li>
-      <li class="slider-list__item">
+      </div>
+      <div class="slider-list__item">
         <div class="slider-list__container">
           <p class="main__description slider-list__description">
             "We have been working with Positivus for the past year and have seen
@@ -65,8 +67,8 @@
           <dt class="slider-list__name">John Smith</dt>
           <dd class="slider-list__position">Marketing Director at XYZ Corp</dd>
         </dl>
-      </li>
-      <li class="slider-list__item">
+      </div>
+      <div class="slider-list__item">
         <div class="slider-list__container">
           <p class="main__description slider-list__description">
             "We have been working with Positivus for the past year and have seen
@@ -80,50 +82,16 @@
           <dt class="slider-list__name">John Smith</dt>
           <dd class="slider-list__position">Marketing Director at XYZ Corp</dd>
         </dl>
-      </li>
-    </ul>
-    <div></div>
-
+      </div>
+    </div>
     <div class="slider-controls">
       <button
         class="slider-controls__button slider-controls__button--prev slider-controls__button--blocked"
-        onclick="plusSlides(-1)"
       >
         <span class="visually-hidden">previous</span>
       </button>
-      <div class="slider-controls__wrapper">
-        <input
-          class="visually-hidden"
-          type="radio"
-          id="btn-1"
-          name="toggle"
-          checked
-        />
-        <label class="slider-controls__item" for="btn-1"
-          ><span class="visually-hidden">First</span></label
-        >
-        <input class="visually-hidden" type="radio" id="btn-2" name="toggle" />
-        <label class="slider-controls__item" for="btn-2"
-          ><span class="visually-hidden">Second</span></label
-        >
-        <input class="visually-hidden" type="radio" id="btn-3" name="toggle" />
-        <label class="slider-controls__item" for="btn-3"
-          ><span class="visually-hidden">Third</span></label
-        >
-        <input class="visually-hidden" type="radio" id="btn-4" name="toggle" />
-
-        <label class="slider-controls__item" for="btn-4"
-          ><span class="visually-hidden">Fourth</span></label
-        >
-        <input class="visually-hidden" type="radio" id="btn-5" name="toggle" />
-        <label class="slider-controls__item" for="btn-5"
-          ><span class="visually-hidden">Fifth</span></label
-        >
-      </div>
-      <button
-        class="slider-controls__button slider-controls__button--next"
-        onclick="plusSlides(1)"
-      >
+      <div class="slider-controls__wrapper"></div>
+      <button class="slider-controls__button slider-controls__button--next">
         <span class="visually-hidden">next</span>
       </button>
     </div>

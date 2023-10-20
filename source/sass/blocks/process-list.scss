@@ -1,5 +1,6 @@
 .process-list {
   @include mxn-list-style();
+  text-align: left;
 
   &__item {
     width: 100%;
@@ -11,6 +12,11 @@
     padding: 30px 30px;
     display: flex;
     flex-direction: column;
+
+    @media (min-width: $desktop-width) {
+      padding: 40px 60px;
+      box-shadow: inset 0 -4px 0;
+    }
   }
 
   &__item--opened {
@@ -24,6 +30,10 @@
     align-items: center;
     padding-left: 71px;
     position: relative;
+
+    @media (min-width: $desktop-width) {
+      padding-left: 100px;
+    }
   }
 
   &__item div::before {
@@ -34,11 +44,21 @@
     height: 38px;
     left: 0px;
     top: 0px;
+
+    @media (min-width: $desktop-width) {
+      width: 65px;
+      height: 70px;
+      @include mxn-font-style(60px, 60px, black, 500);
+    }
   }
 
   &__item:nth-child(2) div::before {
     content: "02";
     top: 10px;
+
+    @media (min-width: $desktop-width) {
+      top: 0px;
+    }
   }
 
   &__item:nth-child(3) div::before {
@@ -48,11 +68,19 @@
   &__item:nth-child(4) div::before {
     content: "04";
     top: 10px;
+
+    @media (min-width: $desktop-width) {
+      top: 0px;
+    }
   }
 
   &__item:nth-child(5) div::before {
     content: "05";
     top: 10px;
+
+    @media (min-width: $desktop-width) {
+      top: 0px;
+    }
   }
 
   &__item:nth-child(6) div::before {
@@ -76,6 +104,11 @@
   &__heading {
     @include mxn-font-style($h4FontSize, $h4LineHeight, black, 500);
     max-width: 203px;
+
+    @media (min-width: $desktop-width) {
+      @include mxn-font-style($h3DescFontSize, $h3DescLineHeight, black, 500);
+      max-width: fit-content;
+    }
   }
 
   &__button {
@@ -87,6 +120,11 @@
     background-image: url('../../img/icons/icon-plus.svg');
     background-size: contain;
     background-color: transparent;
+
+    @media (min-width: $desktop-width) {
+      width: 58px;
+      height: 58px;
+    }
   }
 
   &__item--opened &__button {

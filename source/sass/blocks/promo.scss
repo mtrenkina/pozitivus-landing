@@ -1,8 +1,41 @@
 .promo {
+  @media (min-width: $desktop-width) {
+    height: 515px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 531px auto;
+    grid-template-rows: 231px 182px 68px;
+  }
 
-&__heading {
+  &__heading {
     background-color: transparent;
     @include mxn-font-style($h1FontSize, auto, black, 500);
-}
+    padding: 0;
+    @media (min-width: $desktop-width) {
+      @include mxn-font-style($h1DescFontSize, $h1DescLineHeight, black, 500);
+      margin: 0;
+    }
+  }
 
+  &__img {
+    @media (min-width: $desktop-width) {
+      justify-self: flex-end;
+    }
+  }
+
+  &__description {
+    @media (min-width: $desktop-width) {
+      grid-area: 2 / 1 / 2 / 2;
+      @include mxn-font-style(20px, 28px, black, 400);
+      align-self: center;
+      padding-right: 30px;
+    }
+  }
+
+  &__button {
+    @media (min-width: $desktop-width) {
+      grid-area: 3 / 1 / 4 / 2;
+      width: 264px;
+    }
+  }
 }

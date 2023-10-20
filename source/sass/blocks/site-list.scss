@@ -19,6 +19,10 @@
   &__item a {
     @include mxn-link-style;
     padding: 5px;
+
+    @media (min-width: $desktop-width) {
+      @include mxn-font-style(20px, 28px);
+    }
   }
 
   &__item a:hover {
