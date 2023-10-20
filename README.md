@@ -1,5 +1,5 @@
 # pozitivus-landing
-<p>Adaptive and responsive layout for marketing agency.</p> 
+<p>Adaptive layout for marketing agency.</p> 
 
 ### Project details:
 <p>Landing page.</p>
