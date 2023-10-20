@@ -39,6 +39,10 @@
     }
   }
 
+  &__logo:hover {
+    opacity: 0.6;
+  }
+
   &__logo img {
     width: 144px;
     height: auto;

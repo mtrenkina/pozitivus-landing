@@ -46,10 +46,5 @@
 
     &__slider-list {
         display: flex;
-        gap: 60px;
-
-        @media (min-width: $desktop-width) {
-            gap: 50px;
-          }
     }
 }

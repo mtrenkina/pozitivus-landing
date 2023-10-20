@@ -18,8 +18,14 @@
   }
 
   &__img {
+    width: 390px;
+    height: 310px;
+
     @media (min-width: $desktop-width) {
       justify-self: flex-end;
+      width: 601px;
+      height: 515px;
+      opacity: 0;
     }
   }
 

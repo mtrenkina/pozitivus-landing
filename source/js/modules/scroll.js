@@ -1,3 +1,4 @@
+
 const block = Array.from(document.querySelectorAll(".animated-image-js"));
 
 const observer = new IntersectionObserver(onIntersection, {
@@ -14,3 +15,4 @@ function onIntersection(entries) {
 
 // Use the observer to observe an element
 block.forEach(el => observer.observe(el));
+

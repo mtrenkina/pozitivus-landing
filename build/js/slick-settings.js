@@ -7,6 +7,7 @@ function slider() {
       centerMode: true,
       centerPadding: '310px',
       dots: true,
+      variableWidth: true,
       prevArrow: $('.slider-controls__button--prev'),
       nextArrow: $('.slider-controls__button--next'),
       appendDots: $('.slider-controls__wrapper'),

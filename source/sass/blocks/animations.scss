@@ -1,0 +1,15 @@
+@keyframes animShift {
+  0% {
+    transform: translateX(10%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.on-scroll-animation {
+  animation: animShift 1s linear;
+}

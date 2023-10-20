@@ -47,18 +47,18 @@
     }
   }
 
-  &__container::after {
+  &__container .animated-image-js {
     @media (min-width: $desktop-width) {
-      content: "";
       position: absolute;
       width: 691.57px;
       height: 648px;
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: contain;
-      background-image: url('../../img/sun-and-stars.png');
+      background-image: url('../../img/sun-and-stars.svg');
       top: 70px;
       right: -325px;
+      opacity: 0;
     }
   }
 
@@ -71,7 +71,6 @@
     @media (min-width: $desktop-width) {
       padding: 0;
       width: 556px;
-      
     }
   }
 

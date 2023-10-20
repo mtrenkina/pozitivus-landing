@@ -19,7 +19,7 @@
     }
   }
 
-  &__wrapper::after {
+  & div.animated-image-js {
     @media (min-width: $desktop-width) {
       content: '';
       position: absolute;
@@ -28,9 +28,10 @@
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: contain;
-      background-image: url('../../img/invitation.png');
+      background-image: url('../../img/invitation.svg');
       top: -20px;
       right: 135px;
+      opacity: 0;
     }
   }
 }
