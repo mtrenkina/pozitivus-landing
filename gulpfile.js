@@ -1,48 +1,54 @@
-import gulp from "gulp";
-import plumber from "gulp-plumber";
-import sourcemap from "gulp-sourcemaps";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+import gulp from 'gulp';
+import plumber from 'gulp-plumber';
+import sourcemap from 'gulp-sourcemaps';
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
-const sass = gulpSass( dartSass );
-import postcss from "gulp-postcss";
-import autoprefixer from "autoprefixer";
-import csso from "gulp-csso";
-import rename from "gulp-rename";
-import svgstore from "gulp-svgstore";
-import svgmin from "gulp-svgmin";
-import sync from "browser-sync";
+const sass = gulpSass(dartSass);
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import csso from 'gulp-csso';
+import rename from 'gulp-rename';
+import svgstore from 'gulp-svgstore';
+import svgmin from 'gulp-svgmin';
+import sync from 'browser-sync';
 import imagemin from 'gulp-imagemin';
 import imageminOptipng from 'imagemin-optipng';
 import imageminSvgo from 'imagemin-svgo';
 import imageminMozjpeg from 'imagemin-svgo';
 import webp from 'gulp-webp';
-import fileinclude  from 'gulp-file-include';
+import fileinclude from 'gulp-file-include';
+let uglify = require('gulp-uglify-es').default;
+import babel from 'gulp-babel';
+import rigger from 'gulp-rigger';
 
 const path = {
-  build: { 
-      html: 'build/',
-      js: 'build/js/',
-      css: 'build/css/',
-      img: 'build/img/',
-      fonts: 'build/fonts/'
+  build: {
+    html: 'build/',
+    js: 'build/js/',
+    css: 'build/css/',
+    img: 'build/img/',
+    fonts: 'build/fonts/',
   },
-  source: { 
-      html: 'source/blocks/*.html', 
-      js: 'source/js/script.js',
-      sass: 'source/sass/style.scss',
-      img: 'source/img/**/*.*', 
-      icons: 'source/img/icons/icon-*.svg',
-      webp: 'source/img/**/*.{jpg,png}',
-      fonts: 'source/fonts/**/*.*'
+  source: {
+    source: 'source/',
+    html: 'source/blocks/*.html',
+    js: 'source/js/script.js',
+    sass: 'source/sass/style.scss',
+    img: 'source/img/**/*.*',
+    icons: 'source/img/icons/icon-*.svg',
+    webp: 'source/img/**/*.{jpg,png}',
+    fonts: 'source/fonts/**/*.*',
   },
-  watch: { 
-      html: 'source/**/*.html',
-      js: 'source/js/**/*.js',
-      style: 'source/sass/**/*.scss',
-      img: 'source/img/**/*.*',
-      fonts: 'source/fonts/**/*.*'
+  watch: {
+    html: 'source/**/*.html',
+    js: 'source/js/*.js',
+    style: 'source/sass/**/*.scss',
+    img: 'source/img/**/*.*',
+    fonts: 'source/fonts/**/*.*',
   },
-  clean: './build'
+  clean: './build',
 };
 
 // HTML assembling
@@ -52,7 +58,7 @@ export const htmlBuild = () => {
     .pipe(fileinclude())
     .pipe(gulp.dest(path.build.html))
     .pipe(sync.create().stream());
-}
+};
 
 // Styles assembling
 export const styles = () => {
@@ -66,6 +72,24 @@ export const styles = () => {
     .pipe(rename('styles.min.css'))
     .pipe(sourcemap.write('.'))
     .pipe(gulp.dest(path.build.css))
+    .pipe(sync.create().stream());
+};
+
+// JS assembling
+export const scriptsBuild = () => {
+  return gulp
+    .src(path.source.js)
+    .pipe(sourcemap.init())
+    .pipe(rigger())
+    .pipe(uglify())
+    .pipe(
+      babel({
+        presets: ['@babel/env'],
+      })
+    )
+    .pipe(rename('main.min.js'))
+    .pipe(sourcemap.write())
+    .pipe(gulp.dest(path.build.js))
     .pipe(sync.create().stream());
 };
 
@@ -86,7 +110,7 @@ export const server = (done) => {
 const watcher = () => {
   gulp.watch(path.watch.style, gulp.series('styles'));
   gulp.watch(path.watch.html, gulp.series('htmlBuild'));
-  gulp.watch(path.watch.js).on('change', sync.reload);
+  gulp.watch(path.watch.js, gulp.series('scriptsBuild'));
 };
 
 // Sprite
@@ -98,15 +122,18 @@ export const sprite = () => {
       svgmin({
         plugins: [
           {
-          name: 'removeViewBox',
-          parmas: {
-            active: false,
-          }},
+            name: 'removeViewBox',
+            parmas: {
+              active: false,
+            },
+          },
           {
             name: 'cleanupIDs',
             parmas: {
               active: false,
-          }}]
+            },
+          },
+        ],
       })
     )
     .pipe(rename('sprite.min.svg'))
@@ -131,16 +158,13 @@ export const images = () => {
 export const makeWebp = () => {
   return gulp
     .src(path.source.webp)
-    .pipe(webp({quality: 90}))
-    .pipe(gulp.dest(path.build.img))
-}
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest(path.build.img));
+};
 
 // Move fonts
 export const fontsBuild = () => {
-  return gulp
-    .src(path.source.fonts)
-    .pipe(gulp.dest(path.build.fonts));
-}
-
+  return gulp.src(path.source.fonts).pipe(gulp.dest(path.build.fonts));
+};
 
 export default gulp.series(styles, server, watcher);

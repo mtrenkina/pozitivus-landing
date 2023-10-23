@@ -46,12 +46,11 @@
   }
 
   &__button {
-    margin-top: 35px;
-
     @media (min-width: $desktop-width) {
       width: 268px;
       display: block;
       margin-left: auto;
+      display: none;
     }
   }
 

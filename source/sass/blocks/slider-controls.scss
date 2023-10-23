@@ -26,11 +26,13 @@
   &__button--blocked {
     opacity: 0.3;
     cursor: auto;
+    pointer-events: none;
   }
 
   &__button:not(.slider-controls__button--blocked) {
     opacity: 1;
     cursor: pointer;
+    pointer-events: all;
   }
 
   .slick-dots {

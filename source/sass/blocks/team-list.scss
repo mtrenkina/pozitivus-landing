@@ -1,5 +1,6 @@
 .team-list {
   @include mxn-list-style();
+  margin-bottom: 35px;
 
   &__item {
     width: 100%;
@@ -48,6 +49,10 @@
     position: absolute;
     top: 0;
     right: 0;
+  }
+
+  &__link:hover {
+    opacity: 0.6;
   }
 
   &__person {

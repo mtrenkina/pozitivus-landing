@@ -18,3 +18,4 @@ function onIntersection(entries) {
 
 // Use the observer to observe an element
 block.forEach((el) => observer.observe(el));
+
