@@ -24,12 +24,12 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: auto auto;
-    background-image: url('../../img/testimonials/testimonials-union.svg');
+    background-image: url('./img/testimonials/testimonials-union.svg');
 
     @media (min-width: $desktop-width) {
       width: 606px;
       height: 266px;
-      background-image: url('../../img/testimonials/testimonials-union-desktop.svg');
+      background-image: url('./img/testimonials/testimonials-union-desktop.svg');
     }
   }
 

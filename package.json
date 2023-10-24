@@ -3,7 +3,6 @@
   "private": true,
   "type": "module",
   "description": "Marketing Agency Pozitivus",
-  "homepage": "https://mtrenkina.github.io/pozitivus-landing",
   "devDependencies": {
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
