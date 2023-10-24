@@ -1,4 +1,6 @@
-const slick = () => {
+const mobileWidth = window.matchMedia('(max-width: 767px)');
+
+const slickTestimonials = () => {
   $(document).ready(function () {
     $('.slider-list').slick({
       centerMode: true,
@@ -28,6 +30,35 @@ const slick = () => {
       ],
     });
   });
-}
+};
 
-slick();
+const slickCases = () => {
+  $(document).ready(function () {
+    $('.cases-list').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      arrows: false,
+      variableWidth: true,
+    });
+  });
+};
+
+$(window).on('load resize', function() {
+  if ($(window).width() < 1440) {
+    $('.cases-list:not(.slick-initialized)').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      arrows: false,
+      variableWidth: true,
+    });
+  } else {
+    $(".cases-list.slick-initialized").slick("unslick");
+  }
+});
+
+slickTestimonials();
+if (mobileWidth.matches) slickCases();

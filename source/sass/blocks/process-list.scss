@@ -22,6 +22,7 @@
   &__item--opened {
     height: fit-content;
     background-color: $green;
+    
   }
 
   &__item div {
@@ -131,8 +132,20 @@
     background-image: url('../../img/icons/icon-minus.svg');
   }
 
+  @keyframes list {
+    0% {
+      transform: translateY(-10%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
   &__description {
     display: none;
+    animation: list 0.5s ease-out;
   }
 
   &__item--opened &__description {

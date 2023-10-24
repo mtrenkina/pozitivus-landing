@@ -1,9 +1,12 @@
 .cases-list {
   @include mxn-list-style();
-  width: fit-content;
+  width: 100%;
+  overflow: visible;
 
   @media (min-width: $desktop-width) {
     width: 100%;
+    min-height: 326px;
+    height: fit-content;
   }
 
   &__item {
@@ -13,10 +16,11 @@
     color: white;
     padding: 42px 50px;
     border-radius: 45px;
+    margin-right: 20px;
 
     @media (min-width: $desktop-width) {
       width: 286px;
-      height: fit-content;
+      height: auto;
       padding: 0;
       position: relative;
     }
