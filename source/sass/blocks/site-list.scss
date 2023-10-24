@@ -1,8 +1,10 @@
 .site-list {
   @include mxn-list-style;
 
-  .main-nav:not(.main-nav--nojs) &__item:not(.site-list__item--link) {
-    animation: ani 0.5s ease-out;
+  @media (max-width: $mobile-width-max) {
+    .main-nav:not(.main-nav--nojs) &__item:not(.site-list__item--link) {
+      animation: ani 0.5s ease-out;
+    }
   }
 
   @keyframes ani {

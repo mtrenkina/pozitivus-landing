@@ -19,10 +19,19 @@
     }
   }
 
+  @keyframes openedItem {
+    0% {
+      background-color: $grey;
+    }
+    100% {
+      background-color: $green;
+    }
+  }
+
   &__item--opened {
     height: fit-content;
+    animation: openedItem 0.5s ease-out;
     background-color: $green;
-    
   }
 
   &__item div {
