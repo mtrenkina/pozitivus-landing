@@ -53,6 +53,10 @@
     background-image: url('../../img/icons/icon-arrow-green-and-black.svg');
   }
 
+  &__link:hover {
+    opacity: 0.6;
+  }
+
   &__item::after {
     content: '';
     display: block;

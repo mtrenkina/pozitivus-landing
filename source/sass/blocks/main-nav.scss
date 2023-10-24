@@ -28,7 +28,8 @@
     position: absolute;
     background: linear-gradient(white, $grey);
     border-radius: 14px;
-    padding: 20px;
+    padding: 20px 40px;
+    right: 0px;
     width: 100%;
 
     @media (min-width: $desktop-width) {
@@ -60,8 +61,8 @@
     position: absolute;
     width: 24px;
     height: 24px;
-    top: 5px;
-    right: 0;
+    top: 4px;
+    right: 20px;
     z-index: 2;
     border: 0;
     cursor: pointer;
@@ -73,17 +74,11 @@
     }
   }
 
-  &--opened {
-    @media (max-width: $mobile-width-max) {
-      padding-top: 13px;
-    }
-  }
-
   &--opened &__toogle::before,
   &--opened &__toogle::after {
     content: '';
     position: absolute;
-    top: 24px;
+    top: 10px;
     right: 0;
     width: 24px;
     height: 2px;

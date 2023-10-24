@@ -47,6 +47,10 @@
     @include mxn-font-style(20px, 28px, $green);
   }
 
+  &__link:hover {
+    opacity: 0.6;
+  }
+
   &__link::after {
     content: '';
     position: absolute;

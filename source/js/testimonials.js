@@ -6,11 +6,14 @@ const blockedCheck = (button) => {
   return button.classList.contains('slider-controls__button--blocked');
 };
 
-const checkButtonsDisability = (el, list) => {
-  let slideNumber = list.indexOf(el);
+const checkButtonsDisability = () => {
+  const list = slider.querySelector('.slick-dots');
+  const dots = list.querySelectorAll('li');
+  const active = slider.querySelector('li.slick-active');
+  let slideNumber = [...dots].indexOf(active);
 
   switch (slideNumber) {
-    case list.length - 1:
+    case [...dots].length - 1:
       if (blockedCheck(buttonPrev))
       buttonPrev.classList.remove('slider-controls__button--blocked');
       buttonNext.classList.add('slider-controls__button--blocked');
@@ -21,7 +24,7 @@ const checkButtonsDisability = (el, list) => {
       buttonPrev.classList.add('slider-controls__button--blocked');
       break;
     case -1:
-      checkButtonsDisability(slider.querySelector('.slick-active'), list);
+      checkButtonsDisability();
       break;
     default:
       if (blockedCheck(buttonPrev))
@@ -33,15 +36,13 @@ const checkButtonsDisability = (el, list) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  const list = slider.querySelector('.slick-dots');
-  const dots = [...list.querySelectorAll('li')];
   slider.onclick = (event) => {
     let target = event.target;
 
     if (target.tagName !== 'BUTTON') {
       return;
     } else {
-      checkButtonsDisability(list, dots);
+      checkButtonsDisability();
     }
   };
 });
