@@ -50,7 +50,7 @@
     height: 41px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-image: url('./img/icons/icon-arrow-green-and-black.svg');
+    background-image: url('https://mtrenkina.github.io/pozitivus-landing/img/icons/icon-arrow-green-and-black.svg');
   }
 
   &__link:hover {
@@ -66,7 +66,7 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url('./img/services/tokyo-magnifier-web-search-with-elements.png');
+    background-image: url('https://mtrenkina.github.io/pozitivus-landing/img/services/tokyo-magnifier-web-search-with-elements.png');
     bottom: 50px;
     right: 50px;
 
@@ -78,7 +78,7 @@
   }
 
   &__item:nth-of-type(2)::after {
-    background-image: url('./img/services/tokyo-selecting-a-value-in-the-browser-window.png');
+    background-image: url('https://mtrenkina.github.io/pozitivus-landing/img/services/tokyo-selecting-a-value-in-the-browser-window.png');
 
     @media (min-width: $desktop-width) {
       width: 210px;
@@ -89,7 +89,7 @@
   &__item:nth-of-type(3)::after {
     width: 127.12px;
     height: 129px;
-    background-image: url('./img/services/tokyo-browser-window-with-emoticon-likes-and-stars-around.png');
+    background-image: url('https://mtrenkina.github.io/pozitivus-landing/img/services/tokyo-browser-window-with-emoticon-likes-and-stars-around.png');
 
     @media (min-width: $desktop-width) {
       width: 208.85px;
@@ -101,7 +101,7 @@
   &__item:nth-of-type(4)::after {
     width: 155px;
     height: 142px;
-    background-image: url('./img/services/tokyo-sending-messages-from-one-place-to-another.png');
+    background-image: url('https://mtrenkina.github.io/pozitivus-landing/img/services/tokyo-sending-messages-from-one-place-to-another.png');
     @media (min-width: $desktop-width) {
       width: 210px;
       height: 192.68px;
@@ -112,7 +112,7 @@
   &__item:nth-of-type(5)::after {
     width: 138.72px;
     height: 129px;
-    background-image: url('./img/services/tokyo-many-browser-windows-with-different-information.png');
+    background-image: url('https://mtrenkina.github.io/pozitivus-landing/img/services/tokyo-many-browser-windows-with-different-information.png');
     @media (min-width: $desktop-width) {
       width: 210px;
       height: 195.91px;
@@ -123,7 +123,7 @@
   &__item:nth-of-type(6)::after {
     width: 157.78px;
     height: 129px;
-    background-image: url('./img/services/tokyo-volumetric-analytics-of-different-types-in-web-browsers.png');
+    background-image: url('https://mtrenkina.github.io/pozitivus-landing/img/services/tokyo-volumetric-analytics-of-different-types-in-web-browsers.png');
     @media (min-width: $desktop-width) {
       width: 210px;
       height: 170px;
@@ -131,7 +131,7 @@
   }
 
   &__item:nth-of-type(3n) &__link {
-    background-image: url('./img/icons/icon-arrow-black.svg');
+    background-image: url('https://mtrenkina.github.io/pozitivus-landing/img/icons/icon-arrow-black.svg');
   }
 
   &__link span {
