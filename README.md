@@ -1,7 +1,6 @@
 # pozitivus-landing
 
 ### Project details:
-<p>Adaptive layout landing page for marketing agency.</p> 
 <p>Design credits belong to Olga Averchenko, <a href="https://www.figma.com/community/file/1230604708032389430/positivus-landing-page-design" target="_blank">Figma link</a>.</p> 
 
 ---
