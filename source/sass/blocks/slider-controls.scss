@@ -16,11 +16,11 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url('../../img/icons/icon-arrow-left.svg');
+    background-image: url('https://mtrenkina.github.io/pozitivus-landing/img/icons/icon-arrow-left.svg');
   }
 
   &__button--next {
-    background-image: url('../../img/icons/icon-arrow-right.svg');
+    background-image: url('https://mtrenkina.github.io/pozitivus-landing/img/icons/icon-arrow-right.svg');
   }
 
   &__button--blocked {
@@ -54,7 +54,7 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url('../../img/testimonials/star-white.png');
+    background-image: url('https://mtrenkina.github.io/pozitivus-landing/img/testimonials/star-white.png');
     }
 
   .slick-dots li {
@@ -63,6 +63,6 @@
   }
 
   .slick-active button {
-    background-image: url('../../img/testimonials/star-green.png');
+    background-image: url('https://mtrenkina.github.io/pozitivus-landing/img/testimonials/star-green.png');
   }
 }
